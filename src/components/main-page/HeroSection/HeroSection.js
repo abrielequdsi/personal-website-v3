@@ -52,7 +52,7 @@ const HeroSection = () => {
       <div className="relative pt-6 pb-16 sm:pt-8 md:pt-8 sm:pb-24 lg:pb-32">
         <Navbar />
 
-        <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 lg:mt-32">
+        <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 md:px-14 lg:mt-32">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
             <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
               <h1>
@@ -73,20 +73,9 @@ const HeroSection = () => {
                 <span className="text-indigo-600">Beacon Platform</span>.
               </p>
               <div className="mt-6 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-                {/* <p className="text-base font-medium text-gray-900">
-                  Sign up to get notified when it’s ready.
-                </p> */}
                 <button className="mt-0 px-6 py-3 border border-transparent text-sm font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto sm:text-base">
                   Get in Touch
                 </button>
-
-                {/* <p className="mt-3 text-sm text-gray-500">
-                  We care about the protection of your data. Read our
-                  <a href="#" className="font-medium text-gray-900 underline">
-                    Privacy Policy
-                  </a>
-                  .
-                </p> */}
               </div>
             </div>
             <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
