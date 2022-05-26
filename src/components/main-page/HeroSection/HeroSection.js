@@ -1,138 +1,109 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'About', href: '#' },
+  { name: 'Experience', href: '#' },
+  { name: 'Works', href: '#' },
+  { name: 'Contact', href: '#' },
 ]
 
 const HeroSection = () => {
   return (
-    <div className="relative bg-gray-50 overflow-hidden">
+    <div className="relative bg-white overflow-hidden">
       <div
-        className="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full"
+        className="hidden lg:block lg:absolute lg:inset-0"
         aria-hidden="true"
       >
-        <div className="relative h-full max-w-7xl mx-auto">
-          <svg
-            className="absolute right-full transform translate-y-1/4 translate-x-1/4 lg:translate-x-1/2"
-            width={404}
-            height={784}
-            fill="none"
-            viewBox="0 0 404 784"
-          >
-            <defs>
-              <pattern
-                id="f210dbf6-a58d-4871-961e-36d5016a0f49"
+        <svg
+          className="absolute top-0 left-1/2 transform translate-x-64 -translate-y-8"
+          width={640}
+          height={784}
+          fill="none"
+          viewBox="0 0 640 784"
+        >
+          <defs>
+            <pattern
+              id="9ebea6f4-a1f5-4d96-8c4e-4c2abf658047"
+              x={118}
+              y={0}
+              width={20}
+              height={20}
+              patternUnits="userSpaceOnUse"
+            >
+              <rect
                 x={0}
                 y={0}
-                width={20}
-                height={20}
-                patternUnits="userSpaceOnUse"
-              >
-                <rect
-                  x={0}
-                  y={0}
-                  width={4}
-                  height={4}
-                  className="text-gray-200"
-                  fill="currentColor"
-                />
-              </pattern>
-            </defs>
-            <rect
-              width={404}
-              height={784}
-              fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)"
-            />
-          </svg>
-          <svg
-            className="absolute left-full transform -translate-y-3/4 -translate-x-1/4 md:-translate-y-1/2 lg:-translate-x-1/2"
+                width={4}
+                height={4}
+                className="text-gray-200"
+                fill="currentColor"
+              />
+            </pattern>
+          </defs>
+          <rect
+            y={72}
+            width={640}
+            height={640}
+            className="text-gray-50"
+            fill="currentColor"
+          />
+          <rect
+            x={118}
             width={404}
             height={784}
-            fill="none"
-            viewBox="0 0 404 784"
-          >
-            <defs>
-              <pattern
-                id="5d0dd344-b041-4d26-bec4-8d33ea57ec9b"
-                x={0}
-                y={0}
-                width={20}
-                height={20}
-                patternUnits="userSpaceOnUse"
-              >
-                <rect
-                  x={0}
-                  y={0}
-                  width={4}
-                  height={4}
-                  className="text-gray-200"
-                  fill="currentColor"
-                />
-              </pattern>
-            </defs>
-            <rect
-              width={404}
-              height={784}
-              fill="url(#5d0dd344-b041-4d26-bec4-8d33ea57ec9b)"
-            />
-          </svg>
-        </div>
+            fill="url(#9ebea6f4-a1f5-4d96-8c4e-4c2abf658047)"
+          />
+        </svg>
       </div>
 
-      <div className="relative pt-6 pb-16 sm:pb-24">
+      <div className="relative pt-6 pb-16 sm:pt-8 md:pt-8 sm:pb-24 lg:pb-32">
         <Popover>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <nav
-              className="relative flex items-center justify-between sm:h-10 md:justify-center"
-              aria-label="Global"
-            >
-              <div className="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
-                <div className="flex items-center justify-between w-full md:w-auto">
-                  <a href="#">
-                    <span className="sr-only">Workflow</span>
-                    <img
-                      className="h-8 w-auto sm:h-10"
-                      src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                      alt=""
-                    />
-                  </a>
-                  <div className="-mr-2 flex items-center md:hidden">
-                    <Popover.Button className="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                      <span className="sr-only">Open main menu</span>
-                      <MenuIcon className="h-6 w-6" aria-hidden="true" />
-                    </Popover.Button>
-                  </div>
+          <nav
+            className="relative max-w-8xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-9 lg:px-11 xl:px-13"
+            aria-label="Global"
+          >
+            <div className="flex items-center justify-between flex-1">
+              <div className="flex items-center justify-between w-full md:w-auto">
+                <a href="#">
+                  <img
+                    className="h-8 w-auto sm:h-10"
+                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                    alt=""
+                  />
+                </a>
+                <div className="-mr-2 flex items-center md:hidden">
+                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <span className="sr-only">Open main menu</span>
+                    <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                  </Popover.Button>
                 </div>
               </div>
-              <div className="hidden md:flex md:space-x-10">
-                {navigation.map((item) => (
+              <div className="hidden md:block md:ml-10 md:space-x-10">
+                {navigation.map((item, index) => (
                   <a
                     key={item.name}
                     href={item.href}
-                    className="font-medium text-gray-500 hover:text-gray-900"
+                    className="font-medium text-gray-500 hover:text-indigo-600"
                   >
-                    {item.name}
+                    <span className="text-indigo-600">0{index + 1}. </span>
+                    <span>{item.name}</span>
                   </a>
                 ))}
               </div>
-              <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
-                <span className="inline-flex rounded-md shadow">
-                  <a
-                    href="#"
-                    className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50"
-                  >
-                    Log in
-                  </a>
-                </span>
-              </div>
-            </nav>
-          </div>
+            </div>
+            {/* <div className="hidden md:block text-right">
+              <span className="inline-flex rounded-md shadow-md ring-1 ring-black ring-opacity-5">
+                <a
+                  href="#"
+                  className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50"
+                >
+                  Log in
+                </a>
+              </span>
+            </div> */}
+          </nav>
 
           <Transition
             as={Fragment}
@@ -158,12 +129,12 @@ const HeroSection = () => {
                   </div>
                   <div className="-mr-2">
                     <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                      <span className="sr-only">Close menu</span>
+                      <span className="sr-only">Close main menu</span>
                       <XIcon className="h-6 w-6" aria-hidden="true" />
                     </Popover.Button>
                   </div>
                 </div>
-                <div className="px-2 pt-2 pb-3">
+                <div className="px-2 pt-2 pb-3 space-y-1">
                   {navigation.map((item) => (
                     <a
                       key={item.name}
@@ -174,46 +145,120 @@ const HeroSection = () => {
                     </a>
                   ))}
                 </div>
-                <a
-                  href="#"
-                  className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"
-                >
+                <span className="block text-transparent w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100">
                   Log in
-                </a>
+                </span>
               </div>
             </Popover.Panel>
           </Transition>
         </Popover>
 
-        <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
-          <div className="text-center">
-            <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-              <span className="block xl:inline">Data to enrich your</span>{' '}
-              <span className="block text-indigo-600 xl:inline">
-                online business
-              </span>
-            </h1>
-            <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-              fugiat aliqua.
-            </p>
-            <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-              <div className="rounded-md shadow">
-                <a
-                  href="#"
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
-                >
-                  Get started
-                </a>
+        <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 lg:mt-32">
+          <div className="lg:grid lg:grid-cols-12 lg:gap-8">
+            <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+              <h1>
+                <span className="block text-sm  tracking-wide text-indigo-600 font-medium sm:text-base lg:text-sm xl:text-base">
+                  Hi there, I am
+                </span>
+                <span className="mt-3 sm:mt-5 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl">
+                  <span className="block text-gray-900">Abriele Qudsi</span>
+                  <span className="block text-indigo-600">
+                    Software Engineer
+                  </span>
+                </span>
+              </h1>
+              <p className="mt-3 text-sm text-gray-500 sm:mt-5 sm:text-base lg:text-base xl:text-lg">
+                I am a Tech & Cloud Enthusiast that currently a first year
+                student at <span className="text-indigo-600">UCL</span>. In this
+                summer I will work as a platform engineer intern in{' '}
+                <span className="text-indigo-600">Beacon Platform</span>.
+              </p>
+              <div className="mt-6 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
+                {/* <p className="text-base font-medium text-gray-900">
+                  Sign up to get notified when it’s ready.
+                </p> */}
+                <button className="mt-0 px-6 py-3 border border-transparent text-sm font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto sm:text-base">
+                  Get in Touch
+                </button>
+
+                {/* <p className="mt-3 text-sm text-gray-500">
+                  We care about the protection of your data. Read our
+                  <a href="#" className="font-medium text-gray-900 underline">
+                    Privacy Policy
+                  </a>
+                  .
+                </p> */}
               </div>
-              <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                <a
-                  href="#"
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
+            </div>
+            <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+              <svg
+                className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-8 scale-75 origin-top sm:scale-100 lg:hidden"
+                width={640}
+                height={784}
+                fill="none"
+                viewBox="0 0 640 784"
+                aria-hidden="true"
+              >
+                <defs>
+                  <pattern
+                    id="4f4f415c-a0e9-44c2-9601-6ded5a34a13e"
+                    x={118}
+                    y={0}
+                    width={20}
+                    height={20}
+                    patternUnits="userSpaceOnUse"
+                  >
+                    <rect
+                      x={0}
+                      y={0}
+                      width={4}
+                      height={4}
+                      className="text-gray-200"
+                      fill="currentColor"
+                    />
+                  </pattern>
+                </defs>
+                <rect
+                  y={72}
+                  width={640}
+                  height={640}
+                  className="text-gray-50"
+                  fill="currentColor"
+                />
+                <rect
+                  x={118}
+                  width={404}
+                  height={784}
+                  fill="url(#4f4f415c-a0e9-44c2-9601-6ded5a34a13e)"
+                />
+              </svg>
+              <div className="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
+                <button
+                  type="button"
+                  className="relative block w-full bg-white rounded-lg overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
-                  Live demo
-                </a>
+                  <span className="sr-only">Watch our video to learn more</span>
+
+                  <span
+                    className="absolute inset-0 w-full h-full flex items-center justify-center"
+                    aria-hidden="true"
+                  >
+                    <svg
+                      className="h-20 w-20 text-indigo-500"
+                      fill="currentColor"
+                      viewBox="0 0 84 84"
+                    >
+                      <circle
+                        opacity="0.9"
+                        cx={42}
+                        cy={42}
+                        r={42}
+                        fill="white"
+                      />
+                      <path d="M55.5039 40.3359L37.1094 28.0729C35.7803 27.1869 34 28.1396 34 29.737V54.263C34 55.8604 35.7803 56.8131 37.1094 55.9271L55.5038 43.6641C56.6913 42.8725 56.6913 41.1275 55.5039 40.3359Z" />
+                    </svg>
+                  </span>
+                </button>
               </div>
             </div>
           </div>
