@@ -4,8 +4,8 @@ import { MailIcon } from '@heroicons/react/solid'
 const ContactSection = () => {
   return (
     <div className="bg-white">
-      <div className="max-w-2xl mx-auto py-28 px-4 sm:py-32 sm:px-6 lg:max-w-7xl lg:px-8 ">
-        <div className="max-w-4xl mx-auto ">
+      <div className="py-28 sm:py-32">
+        <div className="px-0 sm:px-8 md:px-16 lg:px-24 xl:px-36">
           <div className="text-left sm:text-center text-indigo-600 font-medium">
             04. Contact
           </div>

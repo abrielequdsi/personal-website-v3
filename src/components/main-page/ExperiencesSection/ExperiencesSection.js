@@ -83,8 +83,8 @@ const includedFeatures = [
 const ExperiencesSection = () => {
   return (
     <div className="bg-white">
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto ">
+      <div className="py-12 sm:py-16">
+        <div className="px-0 sm:px-8 md:px-16 lg:px-24 xl:px-36">
           {/* <h2 className="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">
             Frequently asked questions
           </h2> */}
@@ -97,23 +97,8 @@ const ExperiencesSection = () => {
                     <dt className="text-lg">
                       <Disclosure.Button className="text-left w-full flex justify-between items-start text-gray-400">
                         {/* CONTENT */}
-                        {/* <span className="font-medium text-gray-900">
-                          This is the question
-                        </span> */}
-                        {/* <div key={index}>
-                          <p className="text-xl font-semibold text-gray-900">
-                            {experience.role}
-                          </p>
-                          <p className="text-base font-semibold text-indigo-600 hover:text-indigo-500">
-                            {experience.companyName}
-                          </p>
-
-                          <p className="mt-2 text-sm text-gray-500">
-                            {experience.date}
-                          </p>
-                        </div> */}
                         <div className="flex space-x-4 lg:space-x-6">
-                          <div className="w-9 h-9 lg:w-11 lg:h-11">
+                          {/* <div className="w-9 h-9 lg:w-11 lg:h-11">
                             <Image
                               className="rounded-full"
                               src={experience.companyLogo}
@@ -122,7 +107,7 @@ const ExperiencesSection = () => {
                               height={20}
                               layout="responsive"
                             />
-                          </div>
+                          </div> */}
                           <div key={index}>
                             <div>
                               <p className="block text-xl font-semibold text-gray-900">
@@ -137,27 +122,6 @@ const ExperiencesSection = () => {
                             </div>
                           </div>
                         </div>
-                        {/* <div className="flex items-center space-x-4 lg:space-x-6">
-                          <div className="w-10 h-10 lg:w-12 lg:h-12">
-                            <Image
-                              className="rounded-full"
-                              src={experience.companyLogo}
-                              alt="Company Logo"
-                              width={20}
-                              height={20}
-                              layout="responsive"
-                            />
-                          </div>
-                          <div className="leading-6 space-y-1">
-                            <h3 className="font-semibold text-gray-900">
-                              {experience.role}
-                            </h3>
-                            <p className="font-medium  text-base text-indigo-600">
-                              {experience.companyName}
-                            </p>
-                          </div>
-                        </div> */}
-
                         <span className="ml-6 h-7 flex items-center">
                           <ChevronDownIcon
                             className={classNames(

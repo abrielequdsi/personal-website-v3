@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <Popover>
       <nav
-        className="relative max-w-8xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-9 lg:px-11 xl:px-13"
+        className="relative max-w-8xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-9 lg:px-11 xl:px-13 "
         aria-label="Global"
       >
         <div className="flex items-center justify-between flex-1">

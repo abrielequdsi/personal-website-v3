@@ -6,10 +6,8 @@ import Image from 'next/image'
 const AboutSection = () => {
   return (
     <div className="bg-white">
-      <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8 ">
-        {/* <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">
-          Customers also purchased
-        </h2> */}
+      <div className="py-16 sm:py-24">
+        {/* px-4 max-w-2xl mx-auto lg:max-w-7xl sm:px-6 lg:px-8  */}
 
         <SectionTitle number={1} title={'About Me'} />
 
@@ -33,24 +31,25 @@ const AboutSection = () => {
               performant experiences.
             </p>
           </div>
-          <div className="group relative col-span-1 mx-8 md:mr-5">
+          <div className="group relative col-span-1 mx-8 md:mr-5 max-w-xs">
             <div className="w-full block absolute rounded-md top-5 left-5 border-2 border-indigo-600">
               <Image
                 src="/potrait.jpg"
                 alt="Profile Image"
-                className="w-full object-center rounded-md object-cover lg:w-full lg:h-full opacity-0"
+                className="w-full object-center rounded-md object-cover lg:w-full lg:h-full opacity-0 "
                 layout="responsive"
                 height="275"
                 width="275"
               />
             </div>
+            {/* px-0 sm:px-16 md:px-16 lg:px-24 xl:px-36 */}
             <div className="w-full relative">
               <div className="bg-indigo-600 rounded-md w-full h-full absolute" />
               <Image
                 src="/potrait.jpg"
                 alt="Profile Image"
                 className={
-                  'w-full object-center rounded-md object-cover lg:w-full lg:h-full opacity-25 group-hover:opacity-100 ' +
+                  'w-full object-center rounded-md object-cover lg:w-full lg:h-full opacity-25 group-hover:opacity-100  ' +
                   styles.imageTransition
                 }
                 height="275"
