@@ -1,4 +1,5 @@
 import '@styles/globals.css'
+import { Layout } from '@components/common'
 import Head from 'next/head'
 
 function MyApp({ Component, pageProps }) {
@@ -6,8 +7,12 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Abriele Qudsi</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   )
 }

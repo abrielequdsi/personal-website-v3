@@ -1,6 +1,5 @@
 import React from 'react'
 import { MailIcon } from '@heroicons/react/solid'
-import { Footer } from '@components/common'
 
 const ContactSection = () => {
   return (
@@ -40,7 +39,6 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   )
 }

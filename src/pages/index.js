@@ -5,15 +5,20 @@ import {
   ProjectsSection,
   ContactSection,
 } from '@components/main-page'
+import { LeftLineDecor, RightLineDecor } from '@components/ui'
 
 export default function Home() {
   return (
-    <section className="bg-black-rock ">
-      <HeroSection />
-      <AboutSection />
-      <ExperiencesSection />
-      <ProjectsSection />
-      <ContactSection />
-    </section>
+    <div>
+      <LeftLineDecor />
+      <RightLineDecor />
+      <div>
+        <HeroSection />
+        <AboutSection />
+        <ExperiencesSection />
+        <ProjectsSection />
+        <ContactSection />
+      </div>
+    </div>
   )
 }
