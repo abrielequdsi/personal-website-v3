@@ -84,7 +84,7 @@ const ExperiencesSection = () => {
   return (
     <div className="bg-white">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto ">
+        <div className="max-w-4xl mx-auto ">
           {/* <h2 className="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">
             Frequently asked questions
           </h2> */}
