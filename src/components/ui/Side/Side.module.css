@@ -1,0 +1,37 @@
+
+.divDecorLeft {
+    width: 40px;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    color: #6B7280;
+    left: 40px;
+    right: auto;
+}
+.divDecorRight {
+    width: 40px;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    color: #6B7280;
+    left: auto;
+    right: 40px;
+}
+@media (max-width: 1080px) {
+    .divDecorLeft {
+        left: 20px;
+        right: auto;
+    }
+    .divDecorRight {
+        left: auto;
+        right: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .divDecorLeft {
+        display: none;
+    }
+    .divDecorRight {
+        display: none;
+    }
+}
