@@ -2,6 +2,7 @@ import {
   HeroSection,
   AboutSection,
   ExperiencesSection,
+  ProjectsSection,
 } from '@components/main-page'
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <ExperiencesSection />
+      <ProjectsSection />
     </section>
   )
 }
