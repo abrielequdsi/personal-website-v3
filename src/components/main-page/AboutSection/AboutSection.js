@@ -1,5 +1,6 @@
 import React from 'react'
 import { SectionTitle } from '@components/ui'
+import styles from './AboutSection.module.css'
 import Image from 'next/image'
 
 const AboutSection = () => {
@@ -48,7 +49,10 @@ const AboutSection = () => {
               <Image
                 src="/potrait.jpg"
                 alt="Profile Image"
-                className="w-full object-center rounded-md object-cover lg:w-full lg:h-full opacity-25 group-hover:opacity-100"
+                className={
+                  'w-full object-center rounded-md object-cover lg:w-full lg:h-full opacity-25 group-hover:opacity-100 ' +
+                  styles.imageTransition
+                }
                 height="275"
                 width="275"
                 layout="responsive"
