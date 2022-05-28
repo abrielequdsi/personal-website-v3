@@ -47,8 +47,78 @@ const projects = [
     ],
   },
   {
+    imageSrc: '/project1.png',
+    title: 'Project 1',
+    link: 'https://github.com/',
+    desc: 'An anonymous work marketplace with A.I based job matching. Available on Mobile and website.',
+    tags: [
+      'Go',
+      'Kubernetes',
+      'Next.js',
+      'React-Native',
+      'ElasticSearch',
+      'PostgreSQL',
+    ],
+  },
+  {
     imageSrc: '/project2.png',
-    title: 'Project 4',
+    title: 'Project 2',
+    link: 'https://github.com/',
+    desc: 'A real-time collaborative song-request queue for Spotify. Built with Elixir, Spotify API and Phoenix liveview.',
+    tags: [
+      'Go',
+      'Kubernetes',
+      'Next.js',
+      'React-Native',
+      'ElasticSearch',
+      'PostgreSQL',
+    ],
+  },
+  {
+    imageSrc: '/project1.png',
+    title: 'Project 3',
+    link: 'https://github.com/',
+    desc: 'A real-time collaborative song-request queue for Spotify. Built with Elixir, Spotify API and Phoenix liveview.',
+    tags: [
+      'Go',
+      'Kubernetes',
+      'Next.js',
+      'React-Native',
+      'ElasticSearch',
+      'PostgreSQL',
+    ],
+  },
+  {
+    imageSrc: '/project1.png',
+    title: 'Project 1',
+    link: 'https://github.com/',
+    desc: 'An anonymous work marketplace with A.I based job matching. Available on Mobile and website.',
+    tags: [
+      'Go',
+      'Kubernetes',
+      'Next.js',
+      'React-Native',
+      'ElasticSearch',
+      'PostgreSQL',
+    ],
+  },
+  {
+    imageSrc: '/project2.png',
+    title: 'Project 2',
+    link: 'https://github.com/',
+    desc: 'A real-time collaborative song-request queue for Spotify. Built with Elixir, Spotify API and Phoenix liveview.',
+    tags: [
+      'Go',
+      'Kubernetes',
+      'Next.js',
+      'React-Native',
+      'ElasticSearch',
+      'PostgreSQL',
+    ],
+  },
+  {
+    imageSrc: '/project1.png',
+    title: 'Project 3',
     link: 'https://github.com/',
     desc: 'A real-time collaborative song-request queue for Spotify. Built with Elixir, Spotify API and Phoenix liveview.',
     tags: [
@@ -91,7 +161,7 @@ const ProjectsSection = () => {
           </a>
         </div>
         <div className="mt-6 mb-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8">
-          {projects.map((project) => (
+          {projects.slice(0, 3).map((project) => (
             <a
               key={project.title}
               href={project.href}
@@ -149,11 +219,11 @@ const ProjectsSection = () => {
           ))}
         </div>
 
-        <h2 className="text-3xl font-extrabold  text-gray-900 text-center">
+        <h2 className="text-3xl font-extrabold  text-gray-900 text-center mt-10 sm:mt-14 mb-10">
           Other Noteworthy Projects
         </h2>
         <div className="mt-6 grid grid-cols-1 gap-x-3 gap-y-8 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
-          {projects.map((project, index) => (
+          {projects.slice(3).map((project, index) => (
             <div
               key={index}
               className="group relative bg-white border border-gray-200 rounded-md flex flex-col overflow-hidden"
