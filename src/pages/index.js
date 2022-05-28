@@ -3,6 +3,7 @@ import {
   AboutSection,
   ExperiencesSection,
   ProjectsSection,
+  ContactSection,
 } from '@components/main-page'
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <AboutSection />
       <ExperiencesSection />
       <ProjectsSection />
+      <ContactSection />
     </section>
   )
 }
