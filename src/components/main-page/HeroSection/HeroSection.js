@@ -5,7 +5,7 @@ const HeroSection = () => {
     <div
       // className="mt-16  sm:mt-24 lg:mt-32 py-20 sm:py-28 lg:py-36"
       className="flex justify-start"
-      style={{ minHeight: '80vh' }}
+      style={{ minHeight: '80.6vh' }}
     >
       {/* <div className="mt-16 sm:mt-24 lg:mt-32 py-20 sm:py-28 lg:py-36"> */}
       <div className="flex items-center">
@@ -25,7 +25,7 @@ const HeroSection = () => {
               </span>
             </span>
           </h1>
-          <p className="mt-3 text-sm text-gray-500 sm:mt-5 sm:text-base lg:text-base xl:text-base">
+          <p className="mt-3 sm:mt-5 md:mt-8 text-sm text-gray-500  sm:text-base lg:text-base xl:text-base">
             I am a Tech and Cloud Enthusiast that currently a first year student
             at{' '}
             <a
@@ -44,7 +44,7 @@ const HeroSection = () => {
             </a>
             .
           </p>
-          <div className="mt-6 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
+          <div className="mt-5 md:mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
             <button className="mt-0 px-6 py-3 border border-transparent text-sm font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto sm:text-base">
               Get in Touch
             </button>
