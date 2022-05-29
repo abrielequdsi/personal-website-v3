@@ -13,7 +13,7 @@ const AboutSection = () => {
 
         <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
           <div className="group relative col-span-2">
-            <p className="mt-4 text-lg text-gray-500">
+            <p className="mt-4 text-base sm:text-lg  text-gray-500">
               <span className="text-indigo-600 font-semibold">
                 An innovative developer
               </span>{' '}
@@ -22,7 +22,7 @@ const AboutSection = () => {
               customisable solutions. I am a hard-working programmer with a
               flair for creating elegant solutions in a collaborative manner.
             </p>
-            <p className="mt-4 text-lg text-gray-500">
+            <p className="mt-4 text-base sm:text-lg text-gray-500">
               <span className="text-indigo-600 font-semibold">
                 I enjoy creating things that live on the internet,
               </span>{' '}

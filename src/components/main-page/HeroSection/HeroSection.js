@@ -25,7 +25,7 @@ const HeroSection = () => {
               </span>
             </span>
           </h1>
-          <p className="mt-3 sm:mt-5 md:mt-8 text-sm text-gray-500  sm:text-base lg:text-base xl:text-base">
+          <p className="mt-3 sm:mt-5 md:mt-8 text-gray-500 text-sm sm:text-base md:text-base lg:text-lg">
             I am a Tech and Cloud Enthusiast that currently a first year student
             at{' '}
             <a
