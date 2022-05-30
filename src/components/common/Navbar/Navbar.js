@@ -37,9 +37,9 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="font-medium text-gray-500 hover:text-indigo-600"
+                className="font-medium text-x2-grey hover:text-chinese-black animated focus:text-chinese-black"
               >
-                <span className="text-indigo-600">0{index + 1}. </span>
+                <span className="text-chinese-black">0{index + 1}. </span>
                 <span>{item.name}</span>
               </a>
             ))}

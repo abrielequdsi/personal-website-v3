@@ -68,21 +68,21 @@ const navigation = {
 
 const Footer = () => {
   return (
-    <footer className="bg-white">
+    <footer>
       <div className="max-w-7xl mx-auto pb-6 pt-10 px-4 overflow-hidden sm:px-6 lg:px-8">
         <div className="mt-8 flex justify-center space-x-9">
           {navigation.social.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className="text-gray-400 hover:text-gray-500"
+              className="text-x2-grey hover:text-vampire-black"
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
             </a>
           ))}
         </div>
-        <p className="mt-6 text-center text-base text-gray-400">
+        <p className="mt-6 text-center text-base text-x2-grey">
           &copy; 2019 Abriele Qudsi
         </p>
       </div>

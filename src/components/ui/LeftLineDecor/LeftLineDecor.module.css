@@ -12,7 +12,7 @@
     width: 1.3px;
     height: 100px;
     margin: 0 auto;
-    background-color: rgb(79 70 229);
+    background-color: #BDBDBD;
 }
 .ulDecor li:last-of-type {
     margin-bottom: 20px;
@@ -23,7 +23,7 @@
 }
 .ulDecor li:hover, .ulDecor li:focus {
     transform: translateY(-3px);
-    color: rgb(79 70 229);
+    color: #080808;
     transition: 0.2s ease-in-out 0s;
 }
 .ulDecor li a svg {

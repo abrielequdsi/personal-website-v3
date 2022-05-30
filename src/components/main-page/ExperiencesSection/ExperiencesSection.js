@@ -82,23 +82,22 @@ const includedFeatures = [
 
 const ExperiencesSection = () => {
   return (
-    <div className="bg-white">
-      <div className="py-12 sm:py-16">
-        <div className="px-0 sm:px-8 md:px-16 lg:px-24 xl:px-36">
-          {/* <h2 className="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">
+    <div className="py-12 sm:py-16">
+      <div className="px-0 sm:px-8 md:px-16 lg:px-24 xl:px-36">
+        {/* <h2 className="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">
             Frequently asked questions
           </h2> */}
-          <SectionTitle number={2} title={'Work Experiences'} />
-          <dl className="mt-6 space-y-6 divide-y divide-gray-200">
-            {experiences.map((experience, index) => (
-              <Disclosure as="div" key={index} className="pt-6">
-                {({ open }) => (
-                  <>
-                    <dt className="text-lg">
-                      <Disclosure.Button className="text-left w-full flex justify-between items-start text-gray-400">
-                        {/* CONTENT */}
-                        <div className="flex space-x-4 lg:space-x-6">
-                          {/* <div className="w-9 h-9 lg:w-11 lg:h-11">
+        <SectionTitle number={2} title={'Work Experiences'} />
+        <dl className="mt-6 space-y-6 divide-y divide-gray-200">
+          {experiences.map((experience, index) => (
+            <Disclosure as="div" key={index} className="pt-6">
+              {({ open }) => (
+                <>
+                  <dt className="text-lg">
+                    <Disclosure.Button className="text-left w-full flex justify-between items-start text-gray-400">
+                      {/* CONTENT */}
+                      <div className="flex space-x-4 lg:space-x-6">
+                        {/* <div className="w-9 h-9 lg:w-11 lg:h-11">
                             <Image
                               className="rounded-full"
                               src={experience.companyLogo}
@@ -108,56 +107,52 @@ const ExperiencesSection = () => {
                               layout="responsive"
                             />
                           </div> */}
-                          <div key={index}>
-                            <div>
-                              <p className="block text-xl font-semibold text-gray-900">
-                                {experience.role}
-                              </p>
-                              <p className="mt-1 text-base font-semibold text-indigo-600 hover:text-indigo-500">
-                                {experience.companyName}
-                              </p>
-                              <p className="mt-1 text-xs text-gray-500">
-                                {experience.date}
-                              </p>
-                            </div>
+                        <div key={index}>
+                          <div>
+                            <p className="block text-xl font-semibold text-chinese-black">
+                              {experience.role}
+                            </p>
+                            <p className="mt-1 text-base font-semibold text-x2-grey hover:text-chinese-black hover:underline animated">
+                              {experience.companyName}
+                            </p>
+                            <p className="mt-1 text-xs text-x2-grey">
+                              {experience.date}
+                            </p>
                           </div>
                         </div>
-                        <span className="ml-6 h-7 flex items-center">
-                          <ChevronDownIcon
-                            className={classNames(
-                              open ? '-rotate-180' : 'rotate-0',
-                              'h-6 w-6 transform'
-                            )}
-                            aria-hidden="true"
-                          />
-                        </span>
-                      </Disclosure.Button>
-                    </dt>
-                    <Disclosure.Panel
-                      as="dd"
-                      className="mt-2 pr-0 pt-3 pb-3 pl-5 md:pr-12"
+                      </div>
+                      <span className="ml-6 h-7 flex items-center">
+                        <ChevronDownIcon
+                          className={classNames(
+                            open ? '-rotate-180' : 'rotate-0',
+                            'h-6 w-6 transform'
+                          )}
+                          aria-hidden="true"
+                        />
+                      </span>
+                    </Disclosure.Button>
+                  </dt>
+                  <Disclosure.Panel
+                    as="dd"
+                    className="mt-2 pr-0 pt-3 pb-3 pl-5 md:pr-12"
+                  >
+                    {/* BULLET POINT */}
+                    <ul
+                      role="list"
+                      className="list-disc marker:text-vampire-black space-y-3"
                     >
-                      {/* BULLET POINT */}
-                      <ul
-                        role="list"
-                        className="list-disc marker:text-indigo-600 space-y-3"
-                      >
-                        {experience.descriptions.map((description, index) => (
-                          <li
-                            className="text-sm text-gray-500 pl-1"
-                            key={index}
-                          >
-                            {description}
-                          </li>
-                        ))}
-                      </ul>
-                    </Disclosure.Panel>
-                  </>
-                )}
-              </Disclosure>
-            ))}
-          </dl>
-        </div>
+                      {experience.descriptions.map((description, index) => (
+                        <li className="text-sm text-gray-500 pl-1" key={index}>
+                          {description}
+                        </li>
+                      ))}
+                    </ul>
+                  </Disclosure.Panel>
+                </>
+              )}
+            </Disclosure>
+          ))}
+        </dl>
       </div>
     </div>
   )
