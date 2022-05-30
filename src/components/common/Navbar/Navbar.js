@@ -3,10 +3,10 @@ import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 const navigation = [
-  { name: 'About', href: '#' },
-  { name: 'Experience', href: '#' },
-  { name: 'Works', href: '#' },
-  { name: 'Contact', href: '#' },
+  { name: 'About', href: '#about' },
+  { name: 'Experience', href: '#experience' },
+  { name: 'Works', href: '#project' },
+  { name: 'Contact', href: '#contact' },
 ]
 
 const Navbar = () => {

@@ -9,3 +9,7 @@
 .animated:hover {
     transform: translateY(-3px);
 }
+
+html {
+    scroll-behavior: smooth;
+  }

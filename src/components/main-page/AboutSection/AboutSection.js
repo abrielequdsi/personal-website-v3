@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const AboutSection = () => {
   return (
-    <div className="py-16 sm:py-24">
+    <div className="py-16 sm:py-24" id="about">
       {/* px-4 max-w-2xl mx-auto lg:max-w-7xl sm:px-6 lg:px-8  */}
 
       <SectionTitle number={1} title={'About Me'} />

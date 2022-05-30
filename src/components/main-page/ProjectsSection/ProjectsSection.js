@@ -1,7 +1,7 @@
 import React from 'react'
 import { SectionTitle } from '@components/ui'
 import Image from 'next/image'
-import styles from './ProjectSection.module.css'
+import { ArchiveIcon } from '@heroicons/react/solid'
 
 const projects = [
   {
@@ -102,40 +102,12 @@ const projects = [
       'PostgreSQL',
     ],
   },
-  {
-    imageSrc: '/project2.png',
-    title: 'Project 2',
-    link: 'https://github.com/',
-    desc: 'A real-time collaborative song-request queue for Spotify. Built with Elixir, Spotify API and Phoenix liveview.',
-    tags: [
-      'Go',
-      'Kubernetes',
-      'Next.js',
-      'React-Native',
-      'ElasticSearch',
-      'PostgreSQL',
-    ],
-  },
-  {
-    imageSrc: '/project1.png',
-    title: 'Project 3',
-    link: 'https://github.com/',
-    desc: 'A real-time collaborative song-request queue for Spotify. Built with Elixir, Spotify API and Phoenix liveview.',
-    tags: [
-      'Go',
-      'Kubernetes',
-      'Next.js',
-      'React-Native',
-      'ElasticSearch',
-      'PostgreSQL',
-    ],
-  },
 
   // More products...
 ]
 const ProjectsSection = () => {
   return (
-    <div className="py-16 sm:py-24">
+    <div className="py-16 sm:py-24" id="project">
       <SectionTitle number={3} title={'Projects'} />
 
       <div className="mb-10">
@@ -155,7 +127,7 @@ const ProjectsSection = () => {
           <div key={project.title} className="group text-sm">
             <div
               className={
-                'w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden bg-gray-100 ring-light-grey ring-offset-1 ring-2'
+                'w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden bg-gray-100 animated'
               }
             >
               <a href="">
@@ -197,7 +169,19 @@ const ProjectsSection = () => {
         ))}
       </div>
 
-      <h2 className="text-3xl font-extrabold  text-chinese-black text-center mt-10 sm:mt-14 mb-10">
+      {/* <div className="relative flex pt-5 items-center mt-1">
+        <div className="">
+          <h2 className="flex-shrink mr-4 text-2xl sm:text-3xl font-extrabold  text-chinese-black ">
+            <span className=" text-x2-grey font-semibold text-xl sm:text-2xl pb-1">
+              0{number}.
+            </span>{' '}
+            {title}
+          </h2>
+        </div>
+        <div className="flex-grow border-t max-w-md border-x1-grey" />
+      </div> */}
+
+      <h2 className="text-3xl font-extrabold  text-chinese-black text-center mb-10 pt-16 sm:pt-24">
         Other Noteworthy Projects
       </h2>
       <div className="mt-6 grid grid-cols-1 gap-x-3 gap-y-8 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
@@ -236,6 +220,15 @@ const ProjectsSection = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="mt-8 sm:max-w-lg sm:mx-auto text-left sm:text-center">
+        <a
+          href="/projects"
+          className="mt-0 px-6 py-3 border border-transparent text-sm font-medium rounded-md text-white bg-vampire-black shadow-sm hover:ring-vampire-black hover:outline-none hover:ring-2 hover:ring-offset-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-vampire-black sm:mt-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto sm:text-base animated"
+        >
+          <ArchiveIcon className="mr-2 -ml-1 h-5 w-5" aria-hidden="true" />
+          View Archives
+        </a>
       </div>
     </div>
   )

@@ -1,18 +1,8 @@
 import React from 'react'
 import { SectionTitle } from '@components/ui'
-import Image from 'next/image'
 
 import { Disclosure } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/outline'
-
-const faqs = [
-  {
-    question: "What's the best thing about Switzerland?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-  // More questions...
-]
 
 const experiences = [
   {
@@ -71,22 +61,11 @@ const experiences = [
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
-import { CheckCircleIcon } from '@heroicons/react/solid'
-
-const includedFeatures = [
-  'Private forum access',
-  'Member resources',
-  'Entry to annual conference',
-  'Official member t-shirt',
-]
 
 const ExperiencesSection = () => {
   return (
-    <div className="py-12 sm:py-16">
+    <div className="py-12 sm:py-16" id="experience">
       <div className="px-0 sm:px-8 md:px-16 lg:px-24 xl:px-36">
-        {/* <h2 className="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Frequently asked questions
-          </h2> */}
         <SectionTitle number={2} title={'Work Experiences'} />
         <dl className="mt-6 space-y-6 divide-y divide-gray-200">
           {experiences.map((experience, index) => (
