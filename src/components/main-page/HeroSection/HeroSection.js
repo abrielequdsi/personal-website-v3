@@ -31,7 +31,7 @@ const HeroSection = () => {
             {/* className="mt-0 px-6 py-3 border border-transparent text-sm font-medium rounded-md text-white bg-vampire-black shadow-sm hover:ring-vampire-black hover:outline-none hover:ring-2 hover:ring-offset-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-vampire-black sm:mt-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto sm:text-base animated" */}
             <a
               href="https://www.ucl.ac.uk/"
-              className="text-chinese-black font-semibold animated hover:underline hover:font-bold "
+              className="text-chinese-black font-semibold animated hover:underline hover:font-bold"
             >
               UCL
             </a>{' '}

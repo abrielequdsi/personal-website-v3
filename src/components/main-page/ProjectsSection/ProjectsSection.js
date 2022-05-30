@@ -152,21 +152,22 @@ const ProjectsSection = () => {
       </div>
       <div className="mt-6 mb-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8">
         {projects.slice(0, 3).map((project) => (
-          <a key={project.title} href={project.href} className="group text-sm">
+          <div key={project.title} className="group text-sm">
             <div
               className={
-                'w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden bg-gray-100 ' +
-                styles.imageTransition
+                'w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden bg-gray-100 ring-light-grey ring-offset-1 ring-2'
               }
             >
-              <Image
-                src={project.imageSrc}
-                className="w-full h-full object-center object-cover"
-                alt={project.title}
-                width={576}
-                height={300}
-                layout="responsive"
-              ></Image>
+              <a href="">
+                <Image
+                  src={project.imageSrc}
+                  className="w-full h-full object-center object-cover "
+                  alt={project.title}
+                  width={576}
+                  height={300}
+                  layout="responsive"
+                />
+              </a>
             </div>
             <div className="my-4 flex justify-between items-center">
               <h3 className="block text-xl lg:text-2xl font-bold text-gray-900">
@@ -176,7 +177,8 @@ const ProjectsSection = () => {
                 <button
                   type="button"
                   href="#"
-                  className="inline-flex items-center px-4 py-2  text-sm font-medium rounded-md text-chinese-black bg-light-grey hover:bg-vampire-black hover:text-anti-flash-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-vampire-black animated"
+                  // className="inline-flex items-center px-4 py-2  text-sm font-medium rounded-md text-chinese-black bg-light-grey hover:bg-light-grey  hover:ring-light-grey hover:outline-none hover:ring-2 hover:ring-offset-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-vampire-black animated"
+                  className="inline-flex items-center px-4 py-2  text-sm font-semibold rounded-md text-vampire-black bg-light-grey hover:bg-vampire-black hover:text-anti-flash-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-vampire-black animated"
                 >
                   View Project
                 </button>
@@ -191,7 +193,7 @@ const ProjectsSection = () => {
                 {tag}
               </span>
             ))}
-          </a>
+          </div>
         ))}
       </div>
 
