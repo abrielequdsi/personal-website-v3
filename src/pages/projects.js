@@ -1,9 +1,6 @@
 import React from 'react'
 import { LeftLineDecor, RightLineDecor } from '@components/ui'
-import { SectionTitle } from '@components/ui'
-import Image from 'next/image'
 import { ExternalLinkIcon } from '@heroicons/react/outline'
-import { ArchiveIcon } from '@heroicons/react/solid'
 
 const projectList = [
   {
