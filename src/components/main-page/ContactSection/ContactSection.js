@@ -1,7 +1,16 @@
 import React from 'react'
 import { MailIcon } from '@heroicons/react/solid'
+import { useState } from 'react'
+import { Switch } from '@headlessui/react'
+import { Form } from '@components/common'
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
 
 const ContactSection = () => {
+  const [agreed, setAgreed] = useState(false)
+
   return (
     <div className="py-28 sm:py-32" id="contact">
       <div className="px-0 sm:px-8 md:px-16 lg:px-24 xl:px-36">
@@ -23,12 +32,13 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="mt-8 sm:max-w-lg sm:mx-auto text-left sm:text-center">
+        {/* <div className="mt-8 sm:max-w-lg sm:mx-auto text-left sm:text-center">
           <button className="mt-0 px-6 py-3 inline-flex items-center border border-transparent text-sm font-medium rounded-md text-white bg-vampire-black shadow-sm hover:ring-vampire-black hover:outline-none hover:ring-2 hover:ring-offset-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-vampire-black sm:mt-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto sm:text-base animated">
             <MailIcon className="mr-2 -ml-1 h-5 w-5" aria-hidden="true" />
             Email Me
           </button>
-        </div>
+        </div> */}
+        <Form />
       </div>
     </div>
   )
