@@ -1,0 +1,35 @@
+/* .layoutHidden {
+    opacity: 0;
+}
+.layoutShow {
+    opacity: 1;
+    transition: all 10s linear 2s;
+     transition: opacity 2s ease-in-out;
+    -moz-transition: opacity 2s ease-in-out;
+    -webkit-transition: opacity 2s ease-in-out;
+} */
+.fadeIn {
+        animation: fadeInAnimation ease 1.75s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+   
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* .fadableElement {
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+    -moz-transition: opacity 2s ease-in-out;
+    -webkit-transition: opacity 2s ease-in-out;
+    }
+ 
+ .fadeOut {
+     opacity:0;
+ } */

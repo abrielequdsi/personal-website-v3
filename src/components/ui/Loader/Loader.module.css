@@ -1,0 +1,4 @@
+.loaderHidden {
+    opacity: 0;
+    transition: all 0.75s linear 1.5s;
+}
