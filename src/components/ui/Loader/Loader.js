@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import styles from './Loader.module.css'
-import Image from 'next/Image'
+import Image from 'next/image'
 
 const Loader = () => {
-  const [fading, setFading] = useState(false)
+  const [fading, setFading] = useState(0)
 
   useEffect(() => {
-    setTimeout(() => setFading(true), 500)
+    setTimeout(() => setFading(1), 500)
   }, [])
 
   return (
