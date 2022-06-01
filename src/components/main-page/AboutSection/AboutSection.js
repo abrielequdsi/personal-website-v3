@@ -4,6 +4,71 @@ import styles from './AboutSection.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 
+const techStacks1 = [
+  {
+    name: 'Ts',
+    imageSrc: 'Ts.svg',
+    link: 'https://www.typescriptlang.org/',
+  },
+  {
+    name: 'React',
+    imageSrc: 'React.svg',
+    link: 'https://reactjs.org/',
+  },
+  {
+    name: 'Next.js',
+    imageSrc: 'Next.js.svg',
+    link: 'https://nextjs.org/',
+  },
+  {
+    name: 'Nest.js',
+    imageSrc: 'Nest.js.svg',
+    link: 'https://nestjs.com/',
+  },
+  {
+    name: 'GraphQL',
+    imageSrc: 'GraphQL.svg',
+    link: 'https://graphql.org/',
+  },
+  {
+    name: 'Django',
+    imageSrc: 'Django.svg',
+    link: 'https://www.djangoproject.com/',
+  },
+]
+const techStacks2 = [
+  {
+    name: 'Aws',
+    imageSrc: 'Aws.svg',
+    link: 'https://aws.amazon.com/',
+  },
+  {
+    name: 'Terraform',
+    imageSrc: 'Terraform.svg',
+    link: 'https://www.terraform.io/',
+  },
+  {
+    name: 'Kubernetes',
+    imageSrc: 'Kubernetes.svg',
+    link: 'https://kubernetes.io/',
+  },
+  {
+    name: 'PostgreSQL',
+    imageSrc: 'PostgreSQL.svg',
+    link: 'https://www.postgresql.org/',
+  },
+  {
+    name: 'MongoDb',
+    imageSrc: 'MongoDb.svg',
+    link: 'https://www.mongodb.com/',
+  },
+  {
+    name: 'Python',
+    imageSrc: 'Python.svg',
+    link: 'https://www.python.org/',
+  },
+]
+
 const AboutSection = () => {
   return (
     <div className="py-16 sm:py-24" id="about">
@@ -64,118 +129,34 @@ const AboutSection = () => {
             <span>Technologies I frequently use</span>
           </h1>
           <div className="mt-10 grid grid-cols-12">
-            <Link href="https://www.typescriptlang.org/">
-              <a className="col-span-2 animated">
-                <Image
-                  priority="true"
-                  src="/tech-stacks/Ts.svg"
-                  alt="Ts"
-                  width={42.5}
-                  height={42.5}
-                />
-              </a>
-            </Link>
-            <a className="col-span-2 animated" href="#">
-              <Image
-                priority="true"
-                src="/tech-stacks/React.svg"
-                alt="React"
-                width={42.5}
-                height={42.5}
-              />
-            </a>
-            <a className="col-span-2 animated" href="#">
-              <Image
-                priority="true"
-                src="/tech-stacks/Next.js.svg"
-                alt="Next.js"
-                width={42.5}
-                height={42.5}
-              />
-            </a>
-            <a className="col-span-2 animated" href="#">
-              <Image
-                priority="true"
-                src="/tech-stacks/Nest.js.svg"
-                alt="Nest.js"
-                width={42.5}
-                height={42.5}
-              />
-            </a>
-            <a className="col-span-2 animated" href="#">
-              <Image
-                priority="true"
-                src="/tech-stacks/GraphQL.svg"
-                alt="GraphQL"
-                width={42.5}
-                height={42.5}
-              />
-            </a>
-            <a className="col-span-2 animated" href="#">
-              <Image
-                priority="true"
-                src="/tech-stacks/Django.svg"
-                alt="Django"
-                width={42.5}
-                height={42.5}
-              />
-            </a>
+            {techStacks1.map((techStack, index) => (
+              <Link href={techStack.link} key={index}>
+                <a className="col-span-2 animated">
+                  <Image
+                    priority="true"
+                    src={'/tech-stacks/' + techStack.imageSrc}
+                    alt={techStack.name}
+                    width={42.5}
+                    height={42.5}
+                  />
+                </a>
+              </Link>
+            ))}
           </div>
           <div className="mt-6 grid grid-cols-12">
-            <a className="col-span-2 animated" href="#">
-              <Image
-                priority="true"
-                src="/tech-stacks/Aws.svg"
-                alt="Aws"
-                width={42.5}
-                height={42.5}
-              />
-            </a>
-            <a className="col-span-2 animated" href="#">
-              <Image
-                priority="true"
-                src="/tech-stacks/Terraform.svg"
-                alt="Terraform"
-                width={42.5}
-                height={42.5}
-              />
-            </a>
-            <a className="col-span-2 animated" href="#">
-              <Image
-                priority="true"
-                src="/tech-stacks/Kubernetes.svg"
-                alt="Kubernetes"
-                width={42.5}
-                height={42.5}
-              />
-            </a>
-            <a className="col-span-2 animated" href="#">
-              <Image
-                priority="true"
-                src="/tech-stacks/PostgreSQL.svg"
-                alt="PostgreSQL"
-                width={42.5}
-                height={42.5}
-              />
-            </a>
-            <a className="col-span-2 animated" href="#">
-              <Image
-                priority="true"
-                src="/tech-stacks/MongoDb.svg"
-                alt="MongoDb"
-                width={42.5}
-                height={42.5}
-              />
-            </a>
-            <a className="col-span-2 animated" href="#">
-              <Image
-                priority="true"
-                src="/tech-stacks/Python.svg"
-                alt="Python"
-                width={42.5}
-                height={42.5}
-              />
-            </a>
+            {techStacks2.map((techStack, index) => (
+              <Link href={techStack.link} key={index}>
+                <a className="col-span-2 animated">
+                  <Image
+                    priority="true"
+                    src={'/tech-stacks/' + techStack.imageSrc}
+                    alt={techStack.name}
+                    width={42.5}
+                    height={42.5}
+                  />
+                </a>
+              </Link>
+            ))}
           </div>
         </div>
       </div>
