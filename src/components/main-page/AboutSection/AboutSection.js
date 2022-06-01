@@ -2,6 +2,7 @@ import React from 'react'
 import { SectionTitle } from '@components/ui'
 import styles from './AboutSection.module.css'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const AboutSection = () => {
   return (
@@ -42,9 +43,8 @@ const AboutSection = () => {
               width="275"
             />
           </div>
-          {/* px-0 sm:px-16 md:px-16 lg:px-24 xl:px-36 */}
           <div className="w-full relative">
-            <div className="bg-chinese-black rounded-md w-full h-full absolute" />
+            <div className="bg-vampire-black rounded-md w-full h-full absolute" />
             <Image
               priority="true"
               src="/potrait.jpg"
@@ -61,19 +61,20 @@ const AboutSection = () => {
         </div>
         <div className="mt-6 group relative col-span-2">
           <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-chinese-black">
-            {/*  */}
             <span>Technologies I frequently use</span>
           </h1>
           <div className="mt-10 grid grid-cols-12">
-            <a className="col-span-2 animated" href="#">
-              <Image
-                priority="true"
-                src="/tech-stacks/Ts.svg"
-                alt="Ts"
-                width={42.5}
-                height={42.5}
-              />
-            </a>
+            <Link href="https://www.typescriptlang.org/">
+              <a className="col-span-2 animated">
+                <Image
+                  priority="true"
+                  src="/tech-stacks/Ts.svg"
+                  alt="Ts"
+                  width={42.5}
+                  height={42.5}
+                />
+              </a>
+            </Link>
             <a className="col-span-2 animated" href="#">
               <Image
                 priority="true"
