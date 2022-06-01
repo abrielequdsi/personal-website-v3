@@ -6,7 +6,7 @@ const RightLineDecor = () => {
   return (
     <Side orientation="right">
       <div className={styles.divDecor}>
-        <a href="#">web.qudsi@gmail.com</a>
+        <a href="mailto:web.qudsi@gmail.com">web.qudsi@gmail.com</a>
       </div>
     </Side>
   )

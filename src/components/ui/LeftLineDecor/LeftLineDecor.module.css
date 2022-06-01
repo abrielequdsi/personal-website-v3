@@ -9,17 +9,17 @@
 .ulDecor:after {
     content: '';
     display: block;
-    width: 1.3px;
+    width: 1px;
     height: 100px;
     margin: 0 auto;
-    background-color: #BDBDBD;
+    background-color: #AAAAAA;
 }
 .ulDecor li:last-of-type {
-    margin-bottom: 20px;
+    margin-bottom: 8px;
 }
 
 .ulDecor li {
-    padding-bottom: 20px;
+    padding-bottom: 23px;
 }
 .ulDecor li:hover, .ulDecor li:focus {
     transform: translateY(-3px);
@@ -30,30 +30,3 @@
     width: 20px;
     height: 20px;
 }
-
-/* .divDecor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-.divDecor:after {
-    content: '';
-    display: block;
-    width: 1px;
-    height: 90px;
-    margin: 0 auto;
-    background-color: #6B7280;
-}
-.divDecor a {
-    margin: 20px auto;
-    padding: 10px;
-    font-family: var(--font-mono);
-    font-size: var(--fz-xxs);
-    line-height: var(--fz-lg);
-    letter-spacing: 0.1em;
-    writing-mode: vertical-rl;
-}
-.divDecor a:hover, .divDecor a:focus {
-    transform: translateY(-3px);
-} */
