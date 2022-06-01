@@ -50,14 +50,15 @@ const ProjectsSection = ({ featuredProjects, otherFeaturedProjects }) => {
                 {project.properties.Name.title[0].plain_text}
               </h3>
               <div>
-                <button
-                  type="button"
-                  href={project.properties.Link?.url || ''}
-                  // className="inline-flex items-center px-4 py-2  text-sm font-medium rounded-md text-chinese-black bg-light-grey hover:bg-light-grey  hover:ring-light-grey hover:outline-none hover:ring-2 hover:ring-offset-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-vampire-black animated"
-                  className="inline-flex items-center px-4 py-2  text-sm font-semibold rounded-md text-vampire-black bg-light-grey hover:bg-vampire-black hover:text-anti-flash-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-vampire-black animated"
-                >
-                  View Project
-                </button>
+                <Link href={project.properties.Link?.url || '/'}>
+                  <button
+                    type="button"
+                    // className="inline-flex items-center px-4 py-2  text-sm font-medium rounded-md text-chinese-black bg-light-grey hover:bg-light-grey  hover:ring-light-grey hover:outline-none hover:ring-2 hover:ring-offset-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-vampire-black animated"
+                    className="inline-flex items-center px-4 py-2  text-sm font-semibold rounded-md text-vampire-black bg-light-grey hover:bg-vampire-black hover:text-anti-flash-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-vampire-black animated"
+                  >
+                    View Project
+                  </button>
+                </Link>
               </div>
             </div>
             <p className="text-x2-grey text-base">
