@@ -4,108 +4,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArchiveIcon } from '@heroicons/react/solid'
 
-// const projects = [
-//   {
-//     imageSrc: '/project1.png',
-//     title: 'Project 1',
-//     link: 'https://github.com/',
-//     desc: 'An anonymous work marketplace with A.I based job matching. Available on Mobile and website.',
-//     tags: [
-//       'Go',
-//       'Kubernetes',
-//       'Next.js',
-//       'React-Native',
-//       'ElasticSearch',
-//       'PostgreSQL',
-//     ],
-//   },
-//   {
-//     imageSrc: '/project2.png',
-//     title: 'Project 2',
-//     link: 'https://github.com/',
-//     desc: 'A real-time collaborative song-request queue for Spotify. Built with Elixir, Spotify API and Phoenix liveview.',
-//     tags: [
-//       'Go',
-//       'Kubernetes',
-//       'Next.js',
-//       'React-Native',
-//       'ElasticSearch',
-//       'PostgreSQL',
-//     ],
-//   },
-//   {
-//     imageSrc: '/project1.png',
-//     title: 'Project 3',
-//     link: 'https://github.com/',
-//     desc: 'A real-time collaborative song-request queue for Spotify. Built with Elixir, Spotify API and Phoenix liveview.',
-//     tags: [
-//       'Go',
-//       'Kubernetes',
-//       'Next.js',
-//       'React-Native',
-//       'ElasticSearch',
-//       'PostgreSQL',
-//     ],
-//   },
-//   {
-//     imageSrc: '/project1.png',
-//     title: 'Project 1',
-//     link: 'https://github.com/',
-//     desc: 'An anonymous work marketplace with A.I based job matching. Available on Mobile and website.',
-//     tags: [
-//       'Go',
-//       'Kubernetes',
-//       'Next.js',
-//       'React-Native',
-//       'ElasticSearch',
-//       'PostgreSQL',
-//     ],
-//   },
-//   {
-//     imageSrc: '/project2.png',
-//     title: 'Project 2',
-//     link: 'https://github.com/',
-//     desc: 'A real-time collaborative song-request queue for Spotify. Built with Elixir, Spotify API and Phoenix liveview.',
-//     tags: [
-//       'Go',
-//       'Kubernetes',
-//       'Next.js',
-//       'React-Native',
-//       'ElasticSearch',
-//       'PostgreSQL',
-//     ],
-//   },
-//   {
-//     imageSrc: '/project1.png',
-//     title: 'Project 3',
-//     link: 'https://github.com/',
-//     desc: 'A real-time collaborative song-request queue for Spotify. Built with Elixir, Spotify API and Phoenix liveview.',
-//     tags: [
-//       'Go',
-//       'Kubernetes',
-//       'Next.js',
-//       'React-Native',
-//       'ElasticSearch',
-//       'PostgreSQL',
-//     ],
-//   },
-//   {
-//     imageSrc: '/project1.png',
-//     title: 'Project 1',
-//     link: 'https://github.com/',
-//     desc: 'An anonymous work marketplace with A.I based job matching. Available on Mobile and website.',
-//     tags: [
-//       'Go',
-//       'Kubernetes',
-//       'Next.js',
-//       'React-Native',
-//       'ElasticSearch',
-//       'PostgreSQL',
-//     ],
-//   },
-
-//   // More products...
-// ]
 const ProjectsSection = ({ featuredProjects, otherFeaturedProjects }) => {
   return (
     <div className="py-16 sm:py-24" id="project">
@@ -131,19 +29,21 @@ const ProjectsSection = ({ featuredProjects, otherFeaturedProjects }) => {
                 'w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden bg-gray-100 animated'
               }
             >
-              <a href={project.properties.Link?.url || ''}>
-                <Image
-                  src={
-                    project.properties.Image.files[0]?.external.url ||
-                    '/blank_image.svg'
-                  }
-                  className="w-full h-full object-center object-cover "
-                  alt="Project Image"
-                  width={576}
-                  height={300}
-                  layout="responsive"
-                />
-              </a>
+              <Link href={project.properties.Link?.url || '/'}>
+                <a>
+                  <Image
+                    src={
+                      project.properties.Image.files[0]?.external.url ||
+                      '/blank_image.svg'
+                    }
+                    className="w-full h-full object-center object-cover "
+                    alt="Project Image"
+                    width={576}
+                    height={300}
+                    layout="responsive"
+                  />
+                </a>
+              </Link>
             </div>
             <div className="my-4 flex justify-between items-center">
               <h3 className="block text-xl lg:text-2xl font-bold text-gray-900">
@@ -152,7 +52,7 @@ const ProjectsSection = ({ featuredProjects, otherFeaturedProjects }) => {
               <div>
                 <button
                   type="button"
-                  href="#"
+                  href={project.properties.Link?.url || ''}
                   // className="inline-flex items-center px-4 py-2  text-sm font-medium rounded-md text-chinese-black bg-light-grey hover:bg-light-grey  hover:ring-light-grey hover:outline-none hover:ring-2 hover:ring-offset-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-vampire-black animated"
                   className="inline-flex items-center px-4 py-2  text-sm font-semibold rounded-md text-vampire-black bg-light-grey hover:bg-vampire-black hover:text-anti-flash-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-vampire-black animated"
                 >
@@ -193,7 +93,7 @@ const ProjectsSection = ({ featuredProjects, otherFeaturedProjects }) => {
             </div>
             <div className="flex-1 p-4 pt-1 space-y-2 flex flex-col justify-between">
               <h3 className="text-xl font-semibold text-chinese-black group-hover:underline animated">
-                <Link href={project.properties.Link?.url || ''}>
+                <Link href={project.properties.Link?.url || '/'}>
                   <a>{project.properties.Name.title[0].plain_text}</a>
                 </Link>
               </h3>
