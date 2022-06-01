@@ -1,4 +1,5 @@
-const { Client } = require('@notionhq/client')
+import { Client } from '@notionhq/client'
+import { createContactFormPage } from '@lib/notion'
 
 const notion = new Client({
   auth: process.env.NOTION_API_KEY,
@@ -12,43 +13,7 @@ export default async function handler(req, res) {
   }
   try {
     const { name, email, subject, message } = JSON.parse(req.body)
-    await notion.pages.create({
-      parent: {
-        database_id: process.env.NOTION_DATABASE_ID_CONTACT_FORM,
-      },
-      properties: {
-        Name: {
-          title: [
-            {
-              text: {
-                content: name,
-              },
-            },
-          ],
-        },
-        Email: {
-          email: email,
-        },
-        Subject: {
-          rich_text: [
-            {
-              text: {
-                content: subject,
-              },
-            },
-          ],
-        },
-        Message: {
-          rich_text: [
-            {
-              text: {
-                content: message,
-              },
-            },
-          ],
-        },
-      },
-    })
+    await createContactFormPage(name, email, subject, message)
     res.status(201).json({ msg: 'Success' })
   } catch (error) {
     res.status(500).json({ msg: 'There was an error' })
