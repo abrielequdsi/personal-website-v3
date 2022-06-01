@@ -46,7 +46,7 @@ const ProjectsSection = ({ featuredProjects, otherFeaturedProjects }) => {
               </Link>
             </div>
             <div className="my-4 flex justify-between items-center">
-              <h3 className="block text-xl lg:text-2xl font-bold text-gray-900">
+              <h3 className="block text-xl xl:text-2xl font-bold text-gray-900">
                 {project.properties.Name.title[0].plain_text}
               </h3>
               <div>
@@ -61,7 +61,7 @@ const ProjectsSection = ({ featuredProjects, otherFeaturedProjects }) => {
                 </Link>
               </div>
             </div>
-            <p className="text-x2-grey text-base">
+            <p className="text-x2-grey text-sm">
               {project.properties.Desc.rich_text[0].plain_text}
             </p>
             {project.properties.Tech_Stacks.multi_select.map((tag, index) => (
@@ -93,7 +93,7 @@ const ProjectsSection = ({ featuredProjects, otherFeaturedProjects }) => {
               ></Image>
             </div>
             <div className="flex-1 p-4 pt-1 space-y-2 flex flex-col justify-between">
-              <h3 className="text-xl font-semibold text-chinese-black group-hover:underline animated">
+              <h3 className="text-lg font-semibold text-chinese-black group-hover:underline animated">
                 <Link href={project.properties.Link?.url || '/'}>
                   <a>{project.properties.Name.title[0].plain_text}</a>
                 </Link>
