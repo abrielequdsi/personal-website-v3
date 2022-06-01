@@ -6,7 +6,7 @@ import Link from 'next/link'
 const navigation = [
   { name: 'About', href: '/#about' },
   { name: 'Experience', href: '/#experience' },
-  { name: 'Works', href: '/#project' },
+  { name: 'Project', href: '/#project' },
   { name: 'Contact', href: '/#contact' },
 ]
 
@@ -48,16 +48,6 @@ const Navbar = () => {
             ))}
           </div>
         </div>
-        {/* <div className="hidden md:block text-right">
-      <span className="inline-flex rounded-md shadow-md ring-1 ring-black ring-opacity-5">
-        <a
-          href="#"
-          className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50"
-        >
-          Log in
-        </a>
-      </span>
-    </div> */}
       </nav>
 
       <Transition
@@ -79,7 +69,6 @@ const Navbar = () => {
                 <img className="h-8 w-auto" src="main_logo.svg" alt="" />
               </div>
               <div className="-mr-2">
-                {/* <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"> */}
                 <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-vampire-dark hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-vampire-black">
                   <span className="sr-only">Close main menu</span>
                   <XIcon className="h-6 w-6" aria-hidden="true" />
