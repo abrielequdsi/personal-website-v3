@@ -7,8 +7,9 @@ import {
   ContactSection,
 } from '@components/main-page'
 import { LeftLineDecor, RightLineDecor } from '@components/ui'
+import { experiences } from '@lib/notion'
 
-export default function Home() {
+export default function Home(props) {
   return (
     <div>
       <LeftLineDecor />
@@ -16,10 +17,19 @@ export default function Home() {
       <div>
         <HeroSection />
         <AboutSection />
-        <ExperiencesSection />
+        <ExperiencesSection experiences={props.experiences} />
         <ProjectsSection />
         <ContactSection />
       </div>
     </div>
   )
+}
+
+export async function getServerSideProps() {
+  let { results } = await experiences()
+  return {
+    props: {
+      experiences: results,
+    },
+  }
 }
