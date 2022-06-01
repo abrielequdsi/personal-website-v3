@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import {
   HeroSection,
   AboutSection,
@@ -7,9 +6,17 @@ import {
   ContactSection,
 } from '@components/main-page'
 import { LeftLineDecor, RightLineDecor } from '@components/ui'
-import { experiences } from '@lib/notion'
+import { experiences, projects } from '@lib/notion'
 
 export default function Home(props) {
+  const experiences = props.experiences
+  const featuredProjects = props.projects.filter((project) => {
+    return project.properties.Type.select?.name == 'featured 1'
+  })
+  const otherFeaturedProjects = props.projects.filter((project) => {
+    return project.properties.Type.select?.name == 'featured 2'
+  })
+  // console.log(props.projects[0].properties.Type.select.name)
   return (
     <div>
       <LeftLineDecor />
@@ -17,8 +24,11 @@ export default function Home(props) {
       <div>
         <HeroSection />
         <AboutSection />
-        <ExperiencesSection experiences={props.experiences} />
-        <ProjectsSection />
+        <ExperiencesSection experiences={experiences} />
+        <ProjectsSection
+          featuredProjects={featuredProjects}
+          otherFeaturedProjects={otherFeaturedProjects}
+        />
         <ContactSection />
       </div>
     </div>
@@ -26,10 +36,12 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps() {
-  let { results } = await experiences()
+  const experiencesRes = await experiences()
+  const projectsRes = await projects()
   return {
     props: {
-      experiences: results,
+      experiences: experiencesRes.results,
+      projects: projectsRes.results,
     },
   }
 }

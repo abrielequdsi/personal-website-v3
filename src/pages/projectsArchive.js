@@ -1,6 +1,7 @@
 import React from 'react'
 import { LeftLineDecor, RightLineDecor } from '@components/ui'
 import { ExternalLinkIcon } from '@heroicons/react/outline'
+import { projects } from '@lib/notion'
 
 const projectList = [
   {
@@ -20,7 +21,9 @@ const projectList = [
   // More people...
 ]
 
-const projects = () => {
+const projectsArchive = (props) => {
+  const projects = props.projects
+
   return (
     <div>
       <LeftLineDecor />
@@ -74,24 +77,34 @@ const projects = () => {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200 bg-white">
-                {projectList.map((project, i) => (
-                  <tr key={i}>
-                    <td className="whitespace-nowrap py-4 pl-4 pr-3 text-base font-semibold text-x2-grey sm:pl-6">
-                      {project.year}
+                {projects.map((project, index) => (
+                  <tr key={index}>
+                    <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-semibold text-x2-grey sm:pl-6">
+                      {project.properties.Year.rich_text[0]?.plain_text}
                     </td>
-                    <td className="whitespace-nowrap px-3 py-4 text-base font-medium font-semibold text-vampire-black">
-                      {project.title}
+                    <td className=" px-3 py-4 text-base font-semibold text-vampire-black">
+                      {project.properties.Name.title[0]?.plain_text}
                     </td>
-                    <td className="hidden whitespace-nowrap px-3 py-4 text-base text-x2-grey lg:table-cell">
-                      {project.team}
+                    <td className="hidden whitespace-nowrap px-3 py-4 text-sm text-x2-grey lg:table-cell">
+                      {project.properties.Team.rich_text[0]?.plain_text}
                     </td>
-                    <td className="hidden whitespace-nowrap px-3 py-4 text-base text-x2-grey lg:table-cell">
-                      {project.techStacks}
+                    <td className="hidden px-3 py-4 text-base text-x2-grey lg:table-cell">
+                      {project.properties.Tech_Stacks.multi_select.map(
+                        (tag, index) => (
+                          <span
+                            key={index}
+                            className="text-x2-grey  pr-2.5 py-0.5  inline-flex items-center text-xs font-semibold"
+                          >
+                            {tag.name}
+                          </span>
+                        )
+                      )}
                     </td>
-                    <td className="whitespace-nowrap py-4 pl-3 pr-4 text-right text-base font-medium sm:pr-6">
-                      <a href={project.link}>
+                    <td className="py-4 pl-3 pr-4 text-base font-medium sm:pr-6">
+                      <a href={project.properties.Link?.url || ''}>
                         <ExternalLinkIcon
-                          className="text-x2-grey hover:text-vampire-black animated w-full block"
+                          className="text-x2-grey hover:text-vampire-black animated w-full block "
+                          style={{ minWidth: '20px', maxWidth: '22.5px' }}
                           width="25px"
                           height="25px"
                           layout="responsive"
@@ -109,4 +122,13 @@ const projects = () => {
   )
 }
 
-export default projects
+export default projectsArchive
+
+export async function getServerSideProps() {
+  const projectsRes = await projects()
+  return {
+    props: {
+      projects: projectsRes.results,
+    },
+  }
+}

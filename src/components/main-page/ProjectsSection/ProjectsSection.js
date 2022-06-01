@@ -4,109 +4,109 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArchiveIcon } from '@heroicons/react/solid'
 
-const projects = [
-  {
-    imageSrc: '/project1.png',
-    title: 'Project 1',
-    link: 'https://github.com/',
-    desc: 'An anonymous work marketplace with A.I based job matching. Available on Mobile and website.',
-    tags: [
-      'Go',
-      'Kubernetes',
-      'Next.js',
-      'React-Native',
-      'ElasticSearch',
-      'PostgreSQL',
-    ],
-  },
-  {
-    imageSrc: '/project2.png',
-    title: 'Project 2',
-    link: 'https://github.com/',
-    desc: 'A real-time collaborative song-request queue for Spotify. Built with Elixir, Spotify API and Phoenix liveview.',
-    tags: [
-      'Go',
-      'Kubernetes',
-      'Next.js',
-      'React-Native',
-      'ElasticSearch',
-      'PostgreSQL',
-    ],
-  },
-  {
-    imageSrc: '/project1.png',
-    title: 'Project 3',
-    link: 'https://github.com/',
-    desc: 'A real-time collaborative song-request queue for Spotify. Built with Elixir, Spotify API and Phoenix liveview.',
-    tags: [
-      'Go',
-      'Kubernetes',
-      'Next.js',
-      'React-Native',
-      'ElasticSearch',
-      'PostgreSQL',
-    ],
-  },
-  {
-    imageSrc: '/project1.png',
-    title: 'Project 1',
-    link: 'https://github.com/',
-    desc: 'An anonymous work marketplace with A.I based job matching. Available on Mobile and website.',
-    tags: [
-      'Go',
-      'Kubernetes',
-      'Next.js',
-      'React-Native',
-      'ElasticSearch',
-      'PostgreSQL',
-    ],
-  },
-  {
-    imageSrc: '/project2.png',
-    title: 'Project 2',
-    link: 'https://github.com/',
-    desc: 'A real-time collaborative song-request queue for Spotify. Built with Elixir, Spotify API and Phoenix liveview.',
-    tags: [
-      'Go',
-      'Kubernetes',
-      'Next.js',
-      'React-Native',
-      'ElasticSearch',
-      'PostgreSQL',
-    ],
-  },
-  {
-    imageSrc: '/project1.png',
-    title: 'Project 3',
-    link: 'https://github.com/',
-    desc: 'A real-time collaborative song-request queue for Spotify. Built with Elixir, Spotify API and Phoenix liveview.',
-    tags: [
-      'Go',
-      'Kubernetes',
-      'Next.js',
-      'React-Native',
-      'ElasticSearch',
-      'PostgreSQL',
-    ],
-  },
-  {
-    imageSrc: '/project1.png',
-    title: 'Project 1',
-    link: 'https://github.com/',
-    desc: 'An anonymous work marketplace with A.I based job matching. Available on Mobile and website.',
-    tags: [
-      'Go',
-      'Kubernetes',
-      'Next.js',
-      'React-Native',
-      'ElasticSearch',
-      'PostgreSQL',
-    ],
-  },
+// const projects = [
+//   {
+//     imageSrc: '/project1.png',
+//     title: 'Project 1',
+//     link: 'https://github.com/',
+//     desc: 'An anonymous work marketplace with A.I based job matching. Available on Mobile and website.',
+//     tags: [
+//       'Go',
+//       'Kubernetes',
+//       'Next.js',
+//       'React-Native',
+//       'ElasticSearch',
+//       'PostgreSQL',
+//     ],
+//   },
+//   {
+//     imageSrc: '/project2.png',
+//     title: 'Project 2',
+//     link: 'https://github.com/',
+//     desc: 'A real-time collaborative song-request queue for Spotify. Built with Elixir, Spotify API and Phoenix liveview.',
+//     tags: [
+//       'Go',
+//       'Kubernetes',
+//       'Next.js',
+//       'React-Native',
+//       'ElasticSearch',
+//       'PostgreSQL',
+//     ],
+//   },
+//   {
+//     imageSrc: '/project1.png',
+//     title: 'Project 3',
+//     link: 'https://github.com/',
+//     desc: 'A real-time collaborative song-request queue for Spotify. Built with Elixir, Spotify API and Phoenix liveview.',
+//     tags: [
+//       'Go',
+//       'Kubernetes',
+//       'Next.js',
+//       'React-Native',
+//       'ElasticSearch',
+//       'PostgreSQL',
+//     ],
+//   },
+//   {
+//     imageSrc: '/project1.png',
+//     title: 'Project 1',
+//     link: 'https://github.com/',
+//     desc: 'An anonymous work marketplace with A.I based job matching. Available on Mobile and website.',
+//     tags: [
+//       'Go',
+//       'Kubernetes',
+//       'Next.js',
+//       'React-Native',
+//       'ElasticSearch',
+//       'PostgreSQL',
+//     ],
+//   },
+//   {
+//     imageSrc: '/project2.png',
+//     title: 'Project 2',
+//     link: 'https://github.com/',
+//     desc: 'A real-time collaborative song-request queue for Spotify. Built with Elixir, Spotify API and Phoenix liveview.',
+//     tags: [
+//       'Go',
+//       'Kubernetes',
+//       'Next.js',
+//       'React-Native',
+//       'ElasticSearch',
+//       'PostgreSQL',
+//     ],
+//   },
+//   {
+//     imageSrc: '/project1.png',
+//     title: 'Project 3',
+//     link: 'https://github.com/',
+//     desc: 'A real-time collaborative song-request queue for Spotify. Built with Elixir, Spotify API and Phoenix liveview.',
+//     tags: [
+//       'Go',
+//       'Kubernetes',
+//       'Next.js',
+//       'React-Native',
+//       'ElasticSearch',
+//       'PostgreSQL',
+//     ],
+//   },
+//   {
+//     imageSrc: '/project1.png',
+//     title: 'Project 1',
+//     link: 'https://github.com/',
+//     desc: 'An anonymous work marketplace with A.I based job matching. Available on Mobile and website.',
+//     tags: [
+//       'Go',
+//       'Kubernetes',
+//       'Next.js',
+//       'React-Native',
+//       'ElasticSearch',
+//       'PostgreSQL',
+//     ],
+//   },
 
-  // More products...
-]
-const ProjectsSection = () => {
+//   // More products...
+// ]
+const ProjectsSection = ({ featuredProjects, otherFeaturedProjects }) => {
   return (
     <div className="py-16 sm:py-24" id="project">
       <SectionTitle number={3} title={'Projects'} />
@@ -124,18 +124,21 @@ const ProjectsSection = () => {
         </p>
       </div>
       <div className="mt-6 mb-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8">
-        {projects.slice(0, 3).map((project) => (
-          <div key={project.title} className="group text-sm">
+        {featuredProjects.map((project, index) => (
+          <div key={index} className="group text-sm">
             <div
               className={
                 'w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden bg-gray-100 animated'
               }
             >
-              <a href="">
+              <a href={project.properties.Link?.url || ''}>
                 <Image
-                  src={project.imageSrc}
+                  src={
+                    project.properties.Image.files[0]?.external.url ||
+                    '/blank_image.svg'
+                  }
                   className="w-full h-full object-center object-cover "
-                  alt={project.title}
+                  alt="Project Image"
                   width={576}
                   height={300}
                   layout="responsive"
@@ -144,7 +147,7 @@ const ProjectsSection = () => {
             </div>
             <div className="my-4 flex justify-between items-center">
               <h3 className="block text-xl lg:text-2xl font-bold text-gray-900">
-                {project.title}
+                {project.properties.Name.title[0].plain_text}
               </h3>
               <div>
                 <button
@@ -157,36 +160,25 @@ const ProjectsSection = () => {
                 </button>
               </div>
             </div>
-            <p className="text-x2-grey text-base">{project.desc}</p>
-            {project.tags.map((tag) => (
+            <p className="text-x2-grey text-base">
+              {project.properties.Desc.rich_text[0].plain_text}
+            </p>
+            {project.properties.Tech_Stacks.multi_select.map((tag, index) => (
               <span
-                key={tag}
+                key={index}
                 className="mt-2 text-x2-grey  pr-2.5 py-0.5  inline-flex items-center text-xs font-semibold"
               >
-                {tag}
+                {tag.name}
               </span>
             ))}
           </div>
         ))}
       </div>
-
-      {/* <div className="relative flex pt-5 items-center mt-1">
-        <div className="">
-          <h2 className="flex-shrink mr-4 text-2xl sm:text-3xl font-extrabold  text-chinese-black ">
-            <span className=" text-x2-grey font-semibold text-xl sm:text-2xl pb-1">
-              0{number}.
-            </span>{' '}
-            {title}
-          </h2>
-        </div>
-        <div className="flex-grow border-t max-w-md border-x1-grey" />
-      </div> */}
-
       <h2 className="text-3xl font-extrabold  text-chinese-black text-center mb-10 pt-16 sm:pt-24">
         Other Noteworthy Projects
       </h2>
       <div className="mt-6 grid grid-cols-1 gap-x-3 gap-y-8 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
-        {projects.slice(3).map((project, index) => (
+        {otherFeaturedProjects.map((project, index) => (
           <div
             key={index}
             className="group relative bg-white border border-light-grey rounded-md flex flex-col overflow-hidden animated"
@@ -201,29 +193,31 @@ const ProjectsSection = () => {
             </div>
             <div className="flex-1 p-4 pt-1 space-y-2 flex flex-col justify-between">
               <h3 className="text-xl font-semibold text-chinese-black group-hover:underline animated">
-                <a href={project.link}>
-                  <span aria-hidden="true" className="absolute inset-0" />
-                  {project.title}
-                </a>
+                <Link href={project.properties.Link?.url || ''}>
+                  <a>{project.properties.Name.title[0].plain_text}</a>
+                </Link>
               </h3>
-              <p className="text-sm text-x2-grey">{project.desc}</p>
+              <p className="text-sm text-x2-grey">
+                {project.properties.Desc.rich_text[0].plain_text}
+              </p>
               <div className="justify-end">
-                {project.tags.map((tag) => (
-                  //   inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800"
-                  <span
-                    key={tag}
-                    className="mt-2 text-x2-grey  pr-2.5 py-0.5  inline-flex items-center text-xs font-semibold"
-                  >
-                    {tag}
-                  </span>
-                ))}
+                {project.properties.Tech_Stacks.multi_select.map(
+                  (tag, index) => (
+                    <span
+                      key={index}
+                      className="mt-2 text-x2-grey  pr-2.5 py-0.5  inline-flex items-center text-xs font-semibold"
+                    >
+                      {tag.name}
+                    </span>
+                  )
+                )}
               </div>
             </div>
           </div>
         ))}
       </div>
       <div className="mt-8 sm:max-w-lg sm:mx-auto text-left sm:text-center">
-        <Link href="/projects">
+        <Link href="/projectsArchive">
           <button className="mt-0 px-6 py-3 inline-flex items-center border border-transparent text-sm font-medium rounded-md text-white bg-vampire-black shadow-sm hover:ring-vampire-black hover:outline-none hover:ring-2 hover:ring-offset-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-vampire-black sm:mt-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto sm:text-base animated">
             <ArchiveIcon className="mr-2 -ml-1 h-5 w-5" aria-hidden="true" />
             View Archives
