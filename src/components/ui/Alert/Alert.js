@@ -11,9 +11,6 @@ const Alert = ({ status, clearAlert }) => {
     // setShowAlert()
   }
 
-  console.log('status', status)
-  //   console.log('alert', showAlert)
-
   return (
     <>
       {(() => {
