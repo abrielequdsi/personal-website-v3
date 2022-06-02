@@ -4,7 +4,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArchiveIcon } from '@heroicons/react/solid'
 
-const ProjectsSection = ({ featuredProjects, otherFeaturedProjects }: any): JSX.Element => {
+const ProjectsSection = ({
+  featuredProjects,
+  otherFeaturedProjects,
+}: any): JSX.Element => {
   return (
     <div className="py-16 sm:py-24" id="project">
       <SectionTitle number={3} title={'Projects'} />
@@ -33,8 +36,9 @@ const ProjectsSection = ({ featuredProjects, otherFeaturedProjects }: any): JSX.
                 <a>
                   <Image
                     src={
-                      project.properties.Image.files[0]?.external.url ||
-                      '/blank_image.svg'
+                      project.properties.Image.files.length === 0
+                        ? '/blank_image.svg'
+                        : project.properties.Image.files[0].file.url
                     }
                     className="w-full h-full object-center object-cover "
                     alt="Project Image"
@@ -64,14 +68,16 @@ const ProjectsSection = ({ featuredProjects, otherFeaturedProjects }: any): JSX.
             <p className="text-x2-grey text-sm">
               {project.properties.Desc.rich_text[0].plain_text}
             </p>
-            {project.properties.Tech_Stacks.multi_select.map((tag: {name:string}, index: number) => (
-              <span
-                key={index}
-                className="mt-2 text-x2-grey  pr-2.5 py-0.5  inline-flex items-center text-xs font-semibold"
-              >
-                {tag.name}
-              </span>
-            ))}
+            {project.properties.Tech_Stacks.multi_select.map(
+              (tag: { name: string }, index: number) => (
+                <span
+                  key={index}
+                  className="mt-2 text-x2-grey  pr-2.5 py-0.5  inline-flex items-center text-xs font-semibold"
+                >
+                  {tag.name}
+                </span>
+              )
+            )}
           </div>
         ))}
       </div>
@@ -103,7 +109,7 @@ const ProjectsSection = ({ featuredProjects, otherFeaturedProjects }: any): JSX.
               </p>
               <div className="justify-end">
                 {project.properties.Tech_Stacks.multi_select.map(
-                  (tag: {name:string}, index: number) => (
+                  (tag: { name: string }, index: number) => (
                     <span
                       key={index}
                       className="mt-2 text-x2-grey  pr-2.5 py-0.5  inline-flex items-center text-xs font-semibold"
