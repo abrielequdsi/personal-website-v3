@@ -106,7 +106,7 @@ const projectsArchive: NextPage<any> = (props) => {
 
 export default projectsArchive
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const projectsRes = await projects()
   return {
     props: {

@@ -37,7 +37,7 @@ const Home: NextPage = (props: any) => {
 
 export default Home
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const experiencesRes = await experiences()
   const projectsRes = await projects()
   return {
