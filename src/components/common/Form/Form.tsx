@@ -9,11 +9,10 @@ const Form = (): JSX.Element => {
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
 
-
   // Form submit handler
   const submitForm = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const res = await fetch('http://localhost:3000/api/submit-form', {
+    const res = await fetch('/api/submit-form', {
       method: 'POST',
       body: JSON.stringify({ name, email, subject, message }),
     })
