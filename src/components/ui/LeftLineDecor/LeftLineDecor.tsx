@@ -33,7 +33,7 @@ const navigation = {
   ],
 }
 
-const LeftLineDecor = () => {
+const LeftLineDecor = (): JSX.Element => {
   return (
     <Side orientation="left">
       <ul className={styles.ulDecor}>

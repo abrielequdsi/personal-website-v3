@@ -1,15 +1,18 @@
-import { Client } from '@notionhq/client'
+import type { NextApiRequest, NextApiResponse } from 'next'
 import { createContactFormPage } from '@lib/notion'
 
-const notion = new Client({
-  auth: process.env.NOTION_API_KEY,
-})
+type Data = {
+  msg: string
+}
 
-export default async function handler(req, res) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<Data>
+) {
   if (req.method !== 'POST') {
     return res
       .status(405)
-      .json({ message: `${req.method} requests are not allowed` })
+      .json({ msg: `${req.method} requests are not allowed` })
   }
   try {
     const { name, email, subject, message } = JSON.parse(req.body)

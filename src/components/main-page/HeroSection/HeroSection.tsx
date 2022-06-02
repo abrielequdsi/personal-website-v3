@@ -1,4 +1,4 @@
-const HeroSection = () => {
+const HeroSection = (): JSX.Element => {
   return (
     <div className="flex justify-start" style={{ minHeight: '80.6vh' }}>
       <div className="flex items-center">

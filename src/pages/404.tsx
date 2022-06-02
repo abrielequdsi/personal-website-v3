@@ -1,7 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
+import type { NextPage } from 'next'
 
-const Custom404 = () => {
+const Custom404: NextPage = () => {
   return (
     <div
       className="max-w-2xl mx-8 sm:mx-auto py-20 flex flex-col items-center justify-center fit"

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Mail = (props) => {
+const Mail = (props: any) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

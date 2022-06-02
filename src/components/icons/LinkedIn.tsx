@@ -1,6 +1,6 @@
 import React from 'react'
 
-const LinkedIn = (props) => {
+const LinkedIn = (props: any) => {
   return (
     <svg
       viewBox="0 0 16 16"

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Alert } from '@components/ui'
 
-const Form = () => {
+const Form = (): JSX.Element => {
   const [alert, setAlert] = useState('')
   // Input states
   const [name, setName] = useState('')
@@ -9,12 +9,9 @@ const Form = () => {
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
 
-  const clearAlert = () => {
-    setAlert('')
-  }
 
   // Form submit handler
-  const submitForm = async (e) => {
+  const submitForm = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const res = await fetch('http://localhost:3000/api/submit-form', {
       method: 'POST',
@@ -137,7 +134,7 @@ const Form = () => {
             </form>
           </div>
         </div>
-        <Alert status={alert} clearAlert={clearAlert} />
+        <Alert status={alert} setAlert={setAlert} />
       </div>
     </div>
   )

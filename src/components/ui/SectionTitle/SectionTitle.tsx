@@ -1,6 +1,11 @@
 import React from 'react'
 
-const SectionTitle = ({ number, title }) => {
+type SectionTitleProps = {
+  number: number ,
+  title: string
+}
+
+const SectionTitle = ({ number, title }: SectionTitleProps): JSX.Element => {
   return (
     <div className="relative flex pt-5 items-center mt-1">
       <div className="">

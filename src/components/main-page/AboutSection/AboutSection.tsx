@@ -69,7 +69,7 @@ const techStacks2 = [
   },
 ]
 
-const AboutSection = () => {
+const AboutSection = (): JSX.Element => {
   return (
     <div className="py-16 sm:py-24" id="about">
       {/* px-4 max-w-2xl mx-auto lg:max-w-7xl sm:px-6 lg:px-8  */}
@@ -99,7 +99,7 @@ const AboutSection = () => {
         <div className="group relative col-span-1 mx-8 md:mr-5 max-w-xs">
           <div className="w-full block absolute rounded-md top-5 left-5 border-2 border-vampire-black">
             <Image
-              priority="true"
+              priority={true}
               src="/potrait.jpg"
               alt="Profile Image"
               className="w-full object-center rounded-md object-cover lg:w-full lg:h-full opacity-0 "
@@ -111,7 +111,7 @@ const AboutSection = () => {
           <div className="w-full relative">
             <div className="bg-vampire-black rounded-md w-full h-full absolute" />
             <Image
-              priority="true"
+              priority={true}
               src="/potrait.jpg"
               alt="Profile Image"
               className={
@@ -133,7 +133,7 @@ const AboutSection = () => {
               <Link href={techStack.link} key={index}>
                 <a className="col-span-2 animated">
                   <Image
-                    priority="true"
+                    priority={true}
                     src={'/tech-stacks/' + techStack.imageSrc}
                     alt={techStack.name}
                     width={42.5}
@@ -148,7 +148,7 @@ const AboutSection = () => {
               <Link href={techStack.link} key={index}>
                 <a className="col-span-2 animated">
                   <Image
-                    priority="true"
+                    priority={true}
                     src={'/tech-stacks/' + techStack.imageSrc}
                     alt={techStack.name}
                     width={42.5}

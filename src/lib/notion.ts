@@ -24,10 +24,10 @@ async function projects() {
   return myProjects
 }
 
-async function createContactFormPage(name, email, subject, message) {
+async function createContactFormPage(name: string, email: string, subject: string, message: string) {
   const createRes = await notion.pages.create({
     parent: {
-      database_id: process.env.NOTION_DATABASE_ID_CONTACT_FORM,
+      database_id: process.env.NOTION_DATABASE_ID_CONTACT_FORM!,
     },
     properties: {
       Name: {

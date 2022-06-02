@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Github = (props) => {
+const Github = (props: any) => {
   return (
     <svg
       viewBox="0 0 32 32"

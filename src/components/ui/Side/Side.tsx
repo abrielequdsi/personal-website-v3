@@ -1,7 +1,12 @@
 import React from 'react'
 import styles from './Side.module.css'
 
-const Side = ({ children, orientation }) => {
+type SideProps = {
+  children: React.ReactNode,
+  orientation: string
+}
+
+const Side = ({ children, orientation }: SideProps) => {
   return (
     <div
       className={

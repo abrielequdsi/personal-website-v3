@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Instagram = (props) => {
+const Instagram = (props: any) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

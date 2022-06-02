@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styles from './Loader.module.css'
 import Image from 'next/image'
 
-const Loader = () => {
+const Loader = (): JSX.Element => {
   const [fading, setFading] = useState(0)
 
   useEffect(() => {
@@ -10,7 +10,7 @@ const Loader = () => {
   }, [])
 
   return (
-    <div className={fading && styles.loaderHidden}>
+    <div className={fading ? styles.loaderHidden : ''}>
       <div
         className={'bg-vampire-black h-screen flex justify-center items-center'}
       >
@@ -19,6 +19,7 @@ const Loader = () => {
             <Image
               className="animate-pulse"
               src="/main_logo.svg"
+              alt="main_logo"
               width={72.5}
               height={72.5}
             />

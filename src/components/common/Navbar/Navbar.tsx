@@ -10,7 +10,7 @@ const navigation = [
   { name: 'Contact', href: '/#contact' },
 ]
 
-const Navbar = () => {
+const Navbar = (): JSX.Element => {
   return (
     <Popover>
       <nav

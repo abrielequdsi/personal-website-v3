@@ -1,27 +1,10 @@
 import React from 'react'
+import type { NextPage } from 'next'
 import { LeftLineDecor, RightLineDecor } from '@components/ui'
 import { ExternalLinkIcon } from '@heroicons/react/outline'
 import { projects } from '@lib/notion'
 
-const projectList = [
-  {
-    year: '2019',
-    title: 'Algo Lab So ALgo Lab',
-    techStacks: [
-      'Go',
-      'Kubernetes',
-      'Next.js',
-      'React-Native',
-      'ElasticSearch',
-      'PostgreSQL',
-    ],
-    team: '4 people',
-    link: 'https://github.com/',
-  },
-  // More people...
-]
-
-const projectsArchive = (props) => {
+const projectsArchive: NextPage<any> = (props) => {
   const projects = props.projects
 
   return (
@@ -77,7 +60,7 @@ const projectsArchive = (props) => {
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200 bg-white">
-                {projects.map((project, index) => (
+                {projects.map((project: any, index: number) => (
                   <tr key={index}>
                     <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-semibold text-x2-grey sm:pl-6">
                       {project.properties.Year.rich_text[0]?.plain_text}
@@ -90,7 +73,7 @@ const projectsArchive = (props) => {
                     </td>
                     <td className="hidden px-3 py-4 text-base text-x2-grey lg:table-cell">
                       {project.properties.Tech_Stacks.multi_select.map(
-                        (tag, index) => (
+                        (tag: { name: number }, index: number) => (
                           <span
                             key={index}
                             className="text-x2-grey  pr-2.5 py-0.5  inline-flex items-center text-xs font-semibold"
@@ -107,7 +90,6 @@ const projectsArchive = (props) => {
                           style={{ minWidth: '20px', maxWidth: '22.5px' }}
                           width="25px"
                           height="25px"
-                          layout="responsive"
                         />
                       </a>
                     </td>

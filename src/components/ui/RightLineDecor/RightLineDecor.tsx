@@ -2,7 +2,7 @@ import React from 'react'
 import { Side } from '@components/ui'
 import styles from './RightLineDecor.module.css'
 
-const RightLineDecor = () => {
+const RightLineDecor = (): JSX.Element => {
   return (
     <Side orientation="right">
       <div className={styles.divDecor}>

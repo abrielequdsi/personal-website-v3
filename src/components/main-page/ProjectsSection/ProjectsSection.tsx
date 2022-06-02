@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArchiveIcon } from '@heroicons/react/solid'
 
-const ProjectsSection = ({ featuredProjects, otherFeaturedProjects }) => {
+const ProjectsSection = ({ featuredProjects, otherFeaturedProjects }: any): JSX.Element => {
   return (
     <div className="py-16 sm:py-24" id="project">
       <SectionTitle number={3} title={'Projects'} />
@@ -22,7 +22,7 @@ const ProjectsSection = ({ featuredProjects, otherFeaturedProjects }) => {
         </p>
       </div>
       <div className="mt-6 mb-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8">
-        {featuredProjects.map((project, index) => (
+        {featuredProjects.map((project: any, index: number) => (
           <div key={index} className="group text-sm">
             <div
               className={
@@ -64,7 +64,7 @@ const ProjectsSection = ({ featuredProjects, otherFeaturedProjects }) => {
             <p className="text-x2-grey text-sm">
               {project.properties.Desc.rich_text[0].plain_text}
             </p>
-            {project.properties.Tech_Stacks.multi_select.map((tag, index) => (
+            {project.properties.Tech_Stacks.multi_select.map((tag: {name:string}, index: number) => (
               <span
                 key={index}
                 className="mt-2 text-x2-grey  pr-2.5 py-0.5  inline-flex items-center text-xs font-semibold"
@@ -79,7 +79,7 @@ const ProjectsSection = ({ featuredProjects, otherFeaturedProjects }) => {
         Other Noteworthy Projects
       </h2>
       <div className="mt-6 grid grid-cols-1 gap-x-3 gap-y-8 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
-        {otherFeaturedProjects.map((project, index) => (
+        {otherFeaturedProjects.map((project: any, index: number) => (
           <div
             key={index}
             className="group relative bg-white border border-light-grey rounded-md flex flex-col overflow-hidden animated"
@@ -103,7 +103,7 @@ const ProjectsSection = ({ featuredProjects, otherFeaturedProjects }) => {
               </p>
               <div className="justify-end">
                 {project.properties.Tech_Stacks.multi_select.map(
-                  (tag, index) => (
+                  (tag: {name:string}, index: number) => (
                     <span
                       key={index}
                       className="mt-2 text-x2-grey  pr-2.5 py-0.5  inline-flex items-center text-xs font-semibold"

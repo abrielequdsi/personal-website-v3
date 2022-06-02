@@ -1,3 +1,4 @@
+import type { NextPage } from 'next'
 import {
   HeroSection,
   AboutSection,
@@ -8,15 +9,14 @@ import {
 import { LeftLineDecor, RightLineDecor } from '@components/ui'
 import { experiences, projects } from '@lib/notion'
 
-export default function Home(props) {
+const Home: NextPage = (props: any) => {
   const experiences = props.experiences
-  const featuredProjects = props.projects.filter((project) => {
+  const featuredProjects = props.projects.filter((project: any) => {
     return project.properties.Type.select?.name == 'featured 1'
   })
-  const otherFeaturedProjects = props.projects.filter((project) => {
+  const otherFeaturedProjects = props.projects.filter((project: any) => {
     return project.properties.Type.select?.name == 'featured 2'
   })
-  // console.log(props.projects[0].properties.Type.select.name)
   return (
     <div>
       <LeftLineDecor />
@@ -34,6 +34,8 @@ export default function Home(props) {
     </div>
   )
 }
+
+export default Home
 
 export async function getServerSideProps() {
   const experiencesRes = await experiences()
