@@ -37,8 +37,11 @@ const ProjectsSection = ({
                   <Image
                     src={
                       project.properties.Image.files.length === 0
-                        ? `/projects/${project.properties.Name.title[0].plain_text}.png`
-                        : project.properties.Image.files[0].file.url
+                        ? '/blank_image.svg'
+                        : `/projects/${project.properties.Name.title[0].plain_text}.png`
+                      // : project.properties.Image.files[0].file.url
+                      // This doesn't work: OPTIMIZED_EXTERNAL_IMAGE_REQUEST_UNAUTHORIZED
+                      // Notion s3 doesn't allow optimizing img
                     }
                     className="w-full h-full object-center object-cover "
                     alt="Project Image"
