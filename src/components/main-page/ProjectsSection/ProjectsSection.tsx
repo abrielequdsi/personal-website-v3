@@ -37,7 +37,7 @@ const ProjectsSection = ({
                   <Image
                     src={
                       project.properties.Image.files.length === 0
-                        ? '/blank_image.svg'
+                        ? `/projects/${project.properties.Name.title[0].plain_text}.png`
                         : project.properties.Image.files[0].file.url
                     }
                     className="w-full h-full object-center object-cover "
