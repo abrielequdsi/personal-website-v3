@@ -5,7 +5,12 @@ import { ExternalLinkIcon } from '@heroicons/react/outline'
 import { projects } from '@lib/notion'
 
 const projectsArchive: NextPage<any> = (props) => {
-  const projects = props.projects
+  const projects = props.projects.sort((a: any, b: any) =>
+    a.properties.Year.rich_text[0].text.content <
+    b.properties.Year.rich_text[0].text.content
+      ? 1
+      : -1
+  )
 
   return (
     <div>
