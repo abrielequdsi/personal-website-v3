@@ -15,7 +15,7 @@ const HeroSection = (): JSX.Element => {
             </span>
           </h1>
           <p className="mt-3 sm:mt-5 md:mt-8 text-x2-grey text-sm sm:text-base md:text-base lg:text-lg">
-            I am a Tech and Cloud Enthusiast currently a first-year student at{' '}
+            I am a Tech and Cloud Enthusiast currently a second-year student at{' '}
             <a
               href="https://www.ucl.ac.uk/"
               className="text-chinese-black font-semibold animated hover:underline hover:font-bold"
