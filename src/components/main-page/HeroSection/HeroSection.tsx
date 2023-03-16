@@ -8,14 +8,14 @@ const HeroSection = (): JSX.Element => {
               Hi there, I am
             </span>
             <span className="mt-3 sm:mt-3 md:mt-5 block tracking-tight font-extrabold text-4xl sm:text-5xl md:text-6xl  lg:text-7xl">
-              <span className="block text-vampire-black">Abriele Qudsi (艾泊屿)</span>
+              <span className="block text-vampire-black">Abriele Qudsi</span>
               <span className="block text-x2-grey mt-3 ">
                 Software Engineer
               </span>
             </span>
           </h1>
           <p className="mt-3 sm:mt-5 md:mt-8 text-x2-grey text-sm sm:text-base md:text-base lg:text-lg">
-            I am a Tech and Cloud Enthusiast currently a second-year student at{' '}
+            I am Abriele Qudsi (艾泊屿) a Tech and Cloud Enthusiast currently a second-year student at{' '}
             <a
               href="https://www.ucl.ac.uk/"
               className="text-chinese-black font-semibold animated hover:underline hover:font-bold"
