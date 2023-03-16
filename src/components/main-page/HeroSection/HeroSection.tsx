@@ -8,7 +8,7 @@ const HeroSection = (): JSX.Element => {
               Hi there, I am
             </span>
             <span className="mt-3 sm:mt-3 md:mt-5 block tracking-tight font-extrabold text-4xl sm:text-5xl md:text-6xl  lg:text-7xl">
-              <span className="block text-vampire-black">Abriele Qudsi</span>
+              <span className="block text-vampire-black">Abriele Qudsi (艾泊屿)</span>
               <span className="block text-x2-grey mt-3 ">
                 Software Engineer
               </span>
