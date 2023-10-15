@@ -30,14 +30,14 @@ const HeroSection = (): JSX.Element => {
             >
               Finimize
             </a>{' '}
-            anda Software Engineer Intern at{' '}
+            and a Software Engineer Intern at{' '}
             <a
               href="https://azure.microsoft.com/en-us/industries/telecommunications/#overview"
               className="text-chinese-black font-semibold animated hover:underline hover:font-bold"
             >
               Microsoft
             </a>{' '}
-            (Azure for Operators) during the summer.
+            (Azure for Operators) last summer.
           </p>
           <div className="mt-5 md:mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
             <a
