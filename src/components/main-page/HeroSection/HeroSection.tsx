@@ -15,28 +15,29 @@ const HeroSection = (): JSX.Element => {
             </span>
           </h1>
           <p className="mt-3 sm:mt-5 md:mt-8 text-x2-grey text-sm sm:text-base md:text-base lg:text-lg">
-            I am Abriele Qudsi (艾泊屿) a Tech and Cloud Enthusiast currently a second-year student at{' '}
+            I am Abriele Qudsi (艾泊屿) a Tech and Cloud Enthusiast currently a
+            third-year student at{' '}
             <a
               href="https://www.ucl.ac.uk/"
               className="text-chinese-black font-semibold animated hover:underline hover:font-bold"
             >
               UCL
             </a>{' '}
-            studying Computer Science. Currently, I am a Software Engineer at{' '}
+            studying Computer Science. I was a Software Engineer at{' '}
             <a
               href="https://www.finimize.com/"
               className="text-chinese-black font-semibold animated hover:underline hover:font-bold"
             >
               Finimize
             </a>{' '}
-            and will work as a Software Engineer Intern at{' '}
+            anda Software Engineer Intern at{' '}
             <a
               href="https://azure.microsoft.com/en-us/industries/telecommunications/#overview"
               className="text-chinese-black font-semibold animated hover:underline hover:font-bold"
             >
               Microsoft
             </a>{' '}
-            (Azure for Operators) this summer.
+            (Azure for Operators) during the summer.
           </p>
           <div className="mt-5 md:mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
             <a
